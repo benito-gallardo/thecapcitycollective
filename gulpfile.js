@@ -164,7 +164,16 @@ gulp.task('bundleScripts', function() {
 
 gulp.task('scripts', ['globalScripts', 'bundleScripts']);
 
-
+//////////////////////////////////////////////////////////////////
+// Master Tasks
+// Default Task <-- Make into Dev build vs. Prod build
+gulp.task('default', function(callback) {
+  runSequence('clean',
+              ['lint', 'sass', 'scripts', 'imagemin', 'videoCopy', 'generate'],
+              'minify-html',
+              'sitemap',
+              callback);
+});
 
 gulp.task('netlify', function(callback) {
   runSequence('clean',
