@@ -164,6 +164,17 @@ gulp.task('bundleScripts', function() {
 
 gulp.task('scripts', ['globalScripts', 'bundleScripts']);
 
+
+
+gulp.task('netlify', function(callback) {
+  runSequence('clean',
+              ['lint', 'sass', 'scripts', 'imagemin', 'videoCopy', 'generate'],
+              'minify-html',
+              'sitemap',
+              callback);
+});
+
+
 //////////////////////////////////////////////////////////////////
 // Watch & Serve
 // Watch Files For Changes
