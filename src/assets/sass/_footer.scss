@@ -1,0 +1,68 @@
+footer.page-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  .container {
+    .row {
+      .col {
+        a {
+          color: #fff;
+        } //.col a
+        .h4 {
+          font-size: 1.200rem;
+        } //.col h5
+        ul {
+          li {
+            a {
+              color: color("grey", "lighten-1");
+              font-size: 1.067rem;
+              &:hover {
+                color: #fff;
+              } // hover	
+            } // .col ul li a
+          } //.col ul li
+        } //.col ul
+        .social {
+          margin-top: 7px;
+          @media screen and (max-width: $xsmall-screen-max) {
+            margin-top: 0;
+          }
+          a {
+            font-size: 9px;
+            width: 26px;
+            height: 26px;
+            background: #fff;
+            display: inline-block;
+            border-radius: 50%;
+            color: color("grey", "darken-2");
+            text-align: center;
+            margin-right: 2%;
+            transition: opacity .3s ease;
+            @media screen and (max-width: 1260px) and (min-width: 1201px) {
+              margin-right: 1%;
+            }
+            &:last-of-type {
+              margin-right: 0;
+            }
+            &:hover {
+              opacity: 0.4;
+            } //social a hover
+            &[title="pinterest"] {
+              background: color("grey", "darken-2");
+              position: relative;
+              i {
+                color: white;
+                font-size: 29.9px;
+                line-height: 0.3;
+                left: 0;
+                max-width: 26px;
+                max-height: 26px;
+              } //social a pinterest i 
+            } //social a pinterest
+          } //.col social a
+        } //.col social
+      } //.col
+    } //row
+  } //container
+} //footer

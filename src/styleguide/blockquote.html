@@ -1,0 +1,73 @@
+<html lang="en">
+  <head>
+    <!-- include common head -->
+    <% include ../partials/head.html %>
+    <!-- include styleguide head -->
+    <% include ./partials/head.html %>
+    <!-- page-specific head -->
+    <meta name="description" content="Meta description">
+  </head>
+  <body class="styleguide">
+    <header>
+    <% include ./partials/left-rail.html %>
+    </header>
+    <main><div class="container">
+  <div class="row">
+
+    <div class="col xs12 m9 l10">
+
+      <div class="section">
+
+        <div id="blockquote" class="section scrollspy">
+          <h2 class="header">Blockquotes</h2>
+          <p>
+            Blockquotes are mainly used to give emphasis to a quote or citation. You can also use these for some extra text hierarchy and emphasis.
+            </p>
+          <blockquote>
+            This is an example quotation that uses the blockquote tag.
+            <br>Here is another line to make it look bigger.
+          </blockquote>
+          <pre class="language-markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span><span class="token punctuation">&gt;</span></span><br><span class="tab tab-1"></span>This is an example quotation that uses the blockquote tag.<br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">&gt;</span></span></code></pre>
+        </div>
+
+        <div id="quote-marks" class="section scrollspy">
+          <h2 class="header">Quote marks</h2>
+          <p>
+            Quote marks adds stylized quote marks before and after an element. Combine with other typography classes to achieve a pull quote effect.
+            </p>
+          <div class="quote-marks margin-top-l margin-bottom-l">
+            <h3 class="text-center">             
+              This is an example quotation that uses the blockquote tag.
+              <br>Here is another line to make it look bigger.
+            </h3>
+          </div>
+          <pre class="language-markup"><code class="language-markup">&lt;div class="quote-marks">
+            &lt;h3 class="text-center">             
+              This is an example quotation that uses the blockquote tag.
+              &lt;br>Here is another line to make it look bigger.
+            &lt;/h3>
+          &lt;/div></code></pre>
+        </div>
+
+
+
+      </div><!-- .section -->
+
+    </div><!-- .col -->
+    <div class="col hide-on-small-and-down m3 l2">
+      <div class="toc-wrapper pinned" style="top: 0px;">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#blockquote">Blockquotes</a></li>
+            <li><a href="#quote-marks">Quote marks</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- End Container -->
+    </main>
+        <% include ../partials/footerScripts.html %>
+        <% include ../partials/footerScripts-styleguide.html %>
+  </body>
+</html>

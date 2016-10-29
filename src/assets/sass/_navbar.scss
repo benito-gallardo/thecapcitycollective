@@ -1,0 +1,456 @@
+$navbar-height-mobile: 70px;
+
+// Fixed Navbar
+.navbar-fixed {
+  position: relative;
+  height: $navbar-height-mobile;
+  z-index: 998;
+  @media #{$small-and-down} {
+    height: 56px;
+    line-height: 56px;
+  }
+  nav {
+    position: fixed;
+  }
+}
+
+@media #{$medium-and-up} {
+  nav,
+  nav .nav-wrapper i,
+  nav a.button-collapse,
+  nav a.button-collapse i {
+    height: $navbar-height;
+    line-height: $navbar-height;
+  }
+  .navbar-fixed {
+    height: $navbar-height;
+  }
+}
+
+nav.top-nav {
+  @media #{$medium-only} {
+    .container {
+      width: 90%;
+    }
+  }
+  @media #{$small-and-down} {
+    .container {
+      width: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+      .row {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+  @media #{$xsmall-and-up} {
+    .row .col.xs2-4 {
+      width: 20%;
+      margin-left: auto;
+      left: auto;
+      right: auto;
+    }
+  }
+  color: $navbar-font-color;
+  background-color: #fff;
+  height: $navbar-height-mobile;
+  line-height: $navbar-height-mobile;
+  -moz-box-shadow: 0 1px 3px rgba(7, 7, 7, 0.08);
+  -webkit-box-shadow: 0 1px 3px rgba(7, 7, 7, 0.08);
+  box-shadow: 0 1px 3px rgba(7, 7, 7, 0.08);
+
+  @media #{$small-and-down} {
+    height: 56px;
+    line-height: 56px;
+  }
+  a, .a {
+    color: $navbar-font-color;
+  }
+
+  i,
+  [class^="mdi-"],
+  [class*="mdi-"],
+  i.material-icons {
+    display: block;
+    font-size: 16px;
+    height: $navbar-height-mobile;
+    line-height: $navbar-height-mobile;
+    @media #{$small-and-down} {
+      font-size: 31px;
+      float: left;
+      line-height: inherit;
+      height: auto;
+      padding-right: 6px;
+    }
+  }
+
+  // Logo
+  .col-logo .logo {
+    max-width: 156px;
+    display: block;
+    white-space: nowrap;
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: -12%;
+      @media #{$small-and-down} {
+        margin-top: -5%;
+      }
+    }
+  }
+
+  // Desktop Nav (links)
+  .dektop-nav {
+    li {
+      &.active {
+        background-color: rgba(0, 0, 0, .1);
+      }
+      a {
+        &:hover {
+          background-color: #fff;
+          color: #01586b;
+        }
+      }
+    }
+    li.col {
+      text-align: center;
+      padding: 0;
+      &:first-of-type {
+        a {
+          border-left: 0;
+        }
+      }
+      &:last-of-type {
+        > a {
+          position: relative;
+          &:before {
+            content: "";
+            width: 1px;
+            background: $navbar-border-color;
+            position: absolute;
+            right: -45px;
+            height: 60%;
+            top: 21%;
+          }
+        }
+      }
+      a, .a {
+        max-height: $navbar-height;
+        padding: 0;
+        @media #{$medium-only} {
+          font-size: .9rem;
+        }
+        &:hover {
+          border-color: $navbar-border-color;
+          z-index: 2;
+          position: relative;
+        }
+      }
+      &:hover .dropdown {
+        display: block;
+      }
+    }
+    > li {
+      > a {
+        border-left: 1px solid #fff;
+        border-right: 1px solid #fff;
+        text-align: center;
+      }
+    }
+    .chevron-down {
+      content: "";
+      display: inline-block;
+      margin: 0 -4px 0 2px;
+      background: url(/assets/images/global-nav-arrow.png) no-repeat center;
+      width: 8px;
+      height: 4px;
+      vertical-align: middle;
+      background-size: cover;
+    }
+    .dropdown {
+      position: absolute;
+      display: none;
+      background: #fff;
+      width: 100%;
+      left: 0;
+      border: 1px solid $navbar-border-color;
+      text-align: left;
+      line-height: 1;
+      a, .a {
+        margin: 0 0 19px;
+        font-weight: bold;
+      }
+      a[href^="tel"] {
+        line-height: 24px;
+      }
+      span.learn {
+        color: color("grey","lighten-1");
+        text-transform: uppercase;
+        font-weight: 300;
+        display: block;
+        margin-top: 29px;
+        font-size: 12px;
+        line-height: 16px;
+        + a {
+          line-height: 1.375rem;
+        }
+      }
+      .col {
+        padding: 3.1% 3%;
+        border-left: 1px solid $navbar-border-color;
+        height: 337px;
+        &:first-of-type {
+          border-left: 0;
+        }
+      }
+      ul {
+        li {
+          width: 100%;
+          text-align: left;
+          a {
+            color: color("grey","lighten-1");
+            font-weight: normal;
+            font-size: 14px;
+            &:hover {
+              background-color: #fff;
+              color: #01586b;
+            }
+          }
+        }
+      }
+    }
+  }//.desktop-nav
+
+  //Moblie nav (links)
+  @media #{$small-and-down} {
+    .mobile-button {
+      max-width: 146px;
+      width:100px;
+      white-space: nowrap;
+      padding: 0 10%;
+    }
+    .mobile-nav {
+      display: none;
+      width: 100%;
+      position: absolute;
+      top: 56px;
+      left: 0;
+      li {
+        width: 100%;
+        text-align: left;
+        &:last-of-type a {
+          text-indent: 0;
+        }
+      }
+      > li > a,
+      > li > .a {
+        text-align: left;
+        color: #fff;
+        padding-left: 11px;
+        border: 0;
+        height: 38px;
+        line-height: 38px;
+        font-size: 14px;
+        background: $vol-purple;
+        transition: background .3s ease;
+        &:hover {
+          color: #fff !important;
+          background: #526480 !important;
+        }
+      }
+    }
+  }
+
+  .col-icons {
+    .cart {
+      position:relative;
+      left:10px;
+      top:5px;
+      display:inline-block;
+    }
+    .login, p.contact {
+      display:inline-block;
+    }
+  } //.col-icons
+
+  //Try it free button
+  .col-button {
+    white-space: nowrap;
+    a {
+      max-width: 110px;
+      margin: 0 auto;
+    }
+    &:after {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+  } //.col-button
+
+  // Navbar Search Form
+  .input-field {
+    margin: 0;
+    input {
+      height: 100%;
+      font-size: 18px;
+      border: none;
+      padding-left: 30px;
+      &:focus,
+      &[type=text]:valid,
+      &[type=password]:valid,
+      &[type=email]:valid,
+      &[type=url]:valid,
+      &[type=date]:valid {
+        border: none;
+        box-shadow: none;
+      }
+    }
+    label {
+      top: 0;
+      left: 0;
+      i {
+        color: rgba(255, 255, 255, .7);
+        transition: color .3s;
+      }
+      &.active i {
+        color: $navbar-font-color;
+      }
+      &.active {
+        transform: translateY(0);
+      }
+    }
+  } //.input-field
+}
+
+/**********  Minimal Nav  ***********/
+
+.minimal-nav {
+  
+  .navbar-fixed {
+    @media screen and (min-width:991px) {
+      .col-button.col.xs4.m1-half.padding-0.text-center.mtext-right {
+          width: 37%;
+      }
+    }
+    nav.top-nav .dektop-nav li.col:last-of-type>a:before {
+      background:none;
+  }//before
+    
+  }// navbar-fixed
+}// minimal-nav
+
+/**********  Transparent Dark Nav - 06-2016  ***********/
+.transparent-dark-nav {
+  .top-nav:after {
+    content: '';
+    background-color: #0a1127;
+    opacity: .65;
+    //background-image: url(/assets/images/lp-sem-mobile-a-purple.png);
+    background-repeat: repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  @media #{$small-and-down} {
+    .container {
+      width: 100%;
+    }
+    .navbar-fixed {
+      margin-bottom: -56px;
+    }
+    nav.top-nav .mobile-nav {
+      z-index: -1;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: #0a1127;
+        opacity: .65;
+        z-index: -1;
+      }
+    }
+    nav.top-nav .mobile-nav>li>a,
+    nav.top-nav .mobile-nav>li>.a {
+      background: transparent;
+      position: relative;
+      padding-left: 5%;
+      padding-right: 5%;
+      border-top: 1px solid #0a1127;
+      &.last {
+        border-bottom: 1px solid #0a1127;
+      }
+    }
+  }
+  @media #{$medium-and-up} {
+    .navbar-fixed {
+      margin-bottom: -70px;
+    }
+    nav.top-nav a {
+      color: white;
+    }
+  }
+}
+/*@media only screen and (min-width: 0px) {
+nav.top-nav .row .col.xs2-4 {
+width: auto;
+margin-left: auto;
+left: auto;
+right: auto;
+} }
+
+@media only screen and (min-width: 993px){
+.row .col.m2 {
+width: auto;
+margin-left: auto;
+left: auto;
+right: auto;
+padding: 0 30px 0 0;
+} }
+
+nav.top-nav .dektop-nav li.col .a, nav.top-nav .dektop-nav li.col a {
+max-height: 70px;
+padding: 0 16px;
+}
+
+nav.top-nav .dektop-nav li.col:last-of-type>a:before {
+display: none;
+content: "";
+width: 1px;
+background: #e2e2e2;
+position: absolute;
+height: 60%;
+top: 21%;
+}
+
+nav.top-nav .col-icons .cart {
+position: relative;
+left: 27px;
+top: 5px;
+display: inline-block;
+}*/
+
+/**********  CALLRAIL PPC PHONE NUMBER FOR COMPARISON PAGES  ***********/
+@media #{$xsmall-and-down} {
+  .lp-compare-contact nav.top-nav {
+    .contact-links {
+      font-size:0.88rem;
+      .tel {
+        margin-right:0 !important;
+      }
+    }
+  }
+}

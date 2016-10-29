@@ -1,0 +1,139 @@
+<html lang="en">
+  <head>
+    <!-- include common head -->
+    <% include ../partials/head.html %>
+    <!-- include styleguide head -->
+    <% include ./partials/head.html %>
+    <!-- page-specific head -->
+    <meta name="description" content="Meta description">
+  </head>
+  <body class="styleguide">
+    <header>
+    <% include ./partials/left-rail.html %>
+    </header>
+    <main><div class="container">
+  <div class="row">
+
+    <div class="col xs12 m9 l10">
+
+      <div id="introduction" class="section scrollspy">
+        <h4>Introduction</h4>
+        <p class="caption">ScrollFire is a jQuery Plugin that executes callback functions depending on how far into the page you've scrolled. We'll show you how you can use this plugin with many demos and examples.</p>
+      </div>
+
+
+      <div id="initialization" class="section scrollspy">
+        <h4>jQuery Plugin Initialization</h4>
+        <pre class=" language-javascript"><code class=" col xs12 language-javascript">
+  <span class="token keyword">var</span> options <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>selector<span class="token punctuation">:</span> <span class="token string">'.class'</span><span class="token punctuation">,</span> offset<span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span> callback<span class="token punctuation">:</span> <span class="token string">'globalFunction()'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>selector<span class="token punctuation">:</span> <span class="token string">'.other-class'</span><span class="token punctuation">,</span> offset<span class="token punctuation">:</span> <span class="token number">200</span><span class="token punctuation">,</span> callback<span class="token punctuation">:</span> <span class="token string">'globalFunction()'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">;</span>
+  Materialize<span class="token punctuation">.</span><span class="token function">scrollFire</span><span class="token punctuation">(</span>options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        </code></pre>
+      </div>
+
+      <div id="options" class="section scrollspy">
+        <h4>jQuery Plugin Options</h4>
+        <table class="highlight">
+          <thead>
+            <tr>
+                <th>Option Name</th>
+                <th>Description</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Selector</td>
+              <td>The selector for the element that is being tracked.</td>
+            </tr>
+            <tr>
+              <td>Offset</td>
+              <td>If this is 0, the callback will be fired when the selector element is at the very bottom of the user's window.</td>
+            </tr>
+            <tr>
+              <td>Callback</td>
+              <td>This string is the function call that you want to make when the user scrolls to the threshold. It will only be called once.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Demo -->
+      <h2 class="header">ScrollFire Demo</h2>
+      <p>Scroll through slowly to get sense of what ScrollFire can do for you. This is the ScrollFire code that we have used on this page.</p>
+      <pre class="  language-javascript">  <code class=" language-javascript">
+  <span class="token keyword">var</span> options <span class="token operator">=</span> <span class="token punctuation">[</span></code>
+    <code id="call-1" class=" language-javascript"><span class="token punctuation">{</span>selector<span class="token punctuation">:</span> <span class="token string">'#staggered-test'</span><span class="token punctuation">,</span> offset<span class="token punctuation">:</span> <span class="token number">50</span><span class="token punctuation">,</span> callback<span class="token punctuation">:</span> <span class="token string">'Materialize.toast("This is our ScrollFire Demo!", 1500 )'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span></code>
+    <code id="call-2" class=" language-javascript"><span class="token punctuation">{</span>selector<span class="token punctuation">:</span> <span class="token string">'#staggered-test'</span><span class="token punctuation">,</span> offset<span class="token punctuation">:</span> <span class="token number">205</span><span class="token punctuation">,</span> callback<span class="token punctuation">:</span> <span class="token string">'Materialize.toast("Please continue scrolling!", 1500 )'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span></code>
+    <code id="call-3" class=" language-javascript"><span class="token punctuation">{</span>selector<span class="token punctuation">:</span> <span class="token string">'#staggered-test'</span><span class="token punctuation">,</span> offset<span class="token punctuation">:</span> <span class="token number">400</span><span class="token punctuation">,</span> callback<span class="token punctuation">:</span> <span class="token string">'Materialize.showStaggeredList("#staggered-test")'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span></code>
+    <code id="call-4" class=" language-javascript"><span class="token punctuation">{</span>selector<span class="token punctuation">:</span> <span class="token string">'#image-test'</span><span class="token punctuation">,</span> offset<span class="token punctuation">:</span> <span class="token number">500</span><span class="token punctuation">,</span> callback<span class="token punctuation">:</span> <span class="token string">'Materialize.fadeInImage("#image-test")'</span> <span class="token punctuation">}</span></code>
+  ];
+  Materialize.scrollFire(options);
+      </pre>
+      <ul id="staggered-test">
+        <li>
+          <h4><a href="#">List Item</a></h4>
+          <p>This is a description</p>
+        </li>
+        <li>
+          <h4><a href="#">List Item</a></h4>
+          <p>This is a description</p>
+        </li>
+        <li>
+          <h4><a href="#">List Item</a></h4>
+          <p>This is a description</p>
+        </li>
+        <li>
+          <h4><a href="#">List Item</a></h4>
+          <p>This is a description</p>
+        </li>
+        <li>
+          <h4><a href="#">List Item</a></h4>
+          <p>This is a description</p>
+        </li>
+      </ul>
+
+      <img id="image-test" class="responsive-img" src="https://unsplash.imgix.net/reserve/nE6neNVdRPSIasnmePZe_IMG_1950.jpg?dpr=1.25&amp;fit=crop&amp;fm=jpg&amp;h=700&amp;q=75&amp;w=1050">
+
+
+    </div>
+
+    <div class="col hide-on-small-and-down m3 l2">
+      <div class="toc-wrapper pin-top" style="top: 0px;">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#introduction" class="active">Introduction</a></li>
+            <li><a href="#initialization">Initialization</a></li>
+            <li><a href="#options">Options</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+
+</script>
+
+
+    </main>
+    <% include ../partials/footerScripts.html %>
+    <% include ../partials/footerScripts-styleguide.html %>
+    <script>
+    jQueryLoadListener.Deferred.execute(function(){
+      var options = [
+        {selector: '#staggered-test', offset: 50, callback: 'Materialize.toast("This is our ScrollFire Demo!", 1500 )' },
+        {selector: '#staggered-test', offset: 205, callback: 'Materialize.toast("Please continue scrolling!", 1500 )' },
+        {selector: '#staggered-test', offset: 400, callback: 'Materialize.showStaggeredList("#staggered-test")' },
+        {selector: '#image-test', offset: 500, callback: 'Materialize.fadeInImage("#image-test")' }
+      ];
+      Materialize.scrollFire(options);
+    });
+
+    </script>
+  </body>
+</html>

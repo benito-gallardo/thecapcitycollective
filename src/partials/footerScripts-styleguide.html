@@ -1,0 +1,72 @@
+<script>
+// sets nav
+var setNav = (function () {
+  var my = {};
+  my.init = function () {
+    //set active class on current page and page's parents
+    //console.log(location.pathname.split("/")[1] + '/' + location.pathname.split("/")[2]);
+    $('#nav-mobile a[href="/' + location.pathname.split("/")[1] + '/' + location.pathname.split("/")[2] + '"]').closest('li').addClass('active').parent('ul').parent('div').parent('li').addClass('active').children('a').addClass('active');
+    // reinitiates accordion, now that active classes are set
+    $('.collapsible').collapsible({});
+  };
+  return my;
+}());//setNav
+
+var showHideCode = (function(){
+  var my = {};
+  my.init = function(){
+
+    //on load, check for session var
+    var showCodeVar = localStorage.getItem('showCodeObj');
+
+    if (showCodeVar === "false") {
+      hideCode();
+    } else if (showCodeVar === "true") {
+      showCode();
+    } else {
+      hideCode();
+    }
+
+    //hide on click
+    $('.js-hide-code').click(function(){
+      hideCode();
+    });
+    //show on click
+    $('.js-show-code').click(function(){
+      showCode();
+    });
+  };
+
+  showCode = function(){
+    $(  "pre[class*='language-']").show();
+    showCodeVar = "true";
+    populateStorage(showCodeVar);
+  };
+
+  hideCode = function(){
+    $(  "pre[class*='language-']").hide();
+    showCodeVar = "false";
+    populateStorage(showCodeVar);    
+  };
+  
+  populateStorage = function(showCodeVar){
+    localStorage.setItem('showCodeObj', showCodeVar);
+  };
+
+  return my;
+}());//showHideCode
+
+
+  setNav.init();
+  showHideCode.init();
+
+  $('.scrollspy').scrollSpy();
+  //TODO: investigate why sometimes the pushpin dependency loads so slowly
+  //eg. on styleguide/slider page
+  setTimeout(function(){
+    $('.toc-wrapper').pushpin({ top: $('.toc-wrapper').offset().top });
+  }, 1000);
+
+
+
+</script>

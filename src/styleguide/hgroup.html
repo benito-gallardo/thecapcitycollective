@@ -1,0 +1,360 @@
+<html lang="en">
+  <head>
+    <!-- include common head -->
+    <% include ../partials/head.html %>
+    <!-- include styleguide head -->
+    <% include ./partials/head.html %>
+    <!-- page-specific head -->
+    <meta name="description" content="Meta description">
+  </head>
+  <body class="styleguide">
+    <header>
+    <% include ./partials/left-rail.html %>
+    </header>
+    <main><div class="container">
+  <div class="row">
+
+    <div class="col xs12 m9 l10">
+
+      <div id="hgroup" class="section scrollspy">
+        <h2 class="header">Hgroup</h2>
+        <p class="caption">
+        Hgroup creates hero banners of standard sizes that scale up or down with screen sizes.
+        </p>
+      </div>
+      <section class="hgroup-m grey lighten-2">
+        <div class="valign-middle">
+          <h1 class="margin-top-0">This is a page title</h1>
+          <h2 class="h-subhead">And a quirky subhead about why you should love us</h2>
+        </div><!-- .container -->
+      </section>
+
+      <section>
+      <h3 class="light">Usage</h3>
+      <pre class="language-markup"><code class="language-markup">
+&lt;section class="hgroup-m">
+  &lt;div class="valign-middle">
+    &lt;h1>This is a page title&lt;/h1>
+    &lt;h2 class="h-subhead">And a quirky subhead about why you should love us&lt;/h2>
+  &lt;/div>
+&lt;/section>
+      </code></pre>
+      </section>
+
+      <div id="responsive-hgroup" class="section scrollspy">
+        <h2 class="header">Responsive Hgroup</h2>
+        <p class="caption">
+        Append any/all of -xs, -s, -m, and -l to make the banner respond at that screen size.
+        </p>
+      </div>
+      <section class="hgroup-xs-s-m-l grey lighten-2">
+        <div class="valign-middle">
+          <h1 class="margin-top-0">This is a page title</h1>
+          <h2 class="h-subhead">And a quirky subhead about why you should love us</h2>
+        </div><!-- .container -->
+      </section><!-- .hgroup -->
+
+      <section>
+      <h3 class="light">Usage</h3>
+      <pre class="language-markup"><code class="language-markup">
+&lt;section class="hgroup-xs-s-m-l">
+  &lt;div class="valign-middle">
+    &lt;h1>This is a page title&lt;/h1>
+    &lt;h2 class="h-subhead">And a quirky subhead about why you should love us&lt;/h2>
+  &lt;/div>
+&lt;/section>
+      </code></pre>
+      </section>
+
+
+      
+
+      <!--  Hiding Section-->
+      <div id="heights" class="section">
+        <h2 class="header">Heights</h2>
+        <table class="striped">
+          <thead>
+            <tr>
+              <th></th>
+              <th>XS Screens</th>
+              <th>S Screens</th>
+              <th>M Screens</th>
+              <th>L Screens</th>
+            </tr>
+          </thead>
+            <tbody>
+              <tr>
+                <td>.xs</td>
+                <td class="lighten-0 purple">230px</td>
+                <td class="lighten-0 purple">230px</td>
+                <td class="lighten-0 purple">230px</td>
+                <td class="lighten-0 purple">230px</td>
+              </tr>
+              <tr>
+                <td>.xs-s</td>
+                <td class="lighten-1 purple">230px</td>
+                <td class="lighten-1 blue">400px</td>
+                <td class="lighten-1 blue">400px</td>
+                <td class="lighten-1 blue">400px</td>
+              </tr>
+              <tr>
+                <td>.xs-s-m</td>
+                <td class="lighten-0 purple">230px</td>
+                <td class="lighten-0 blue">400px</td>
+                <td class="lighten-0 teal">600px</td>
+                <td class="lighten-0 teal">600px</td>
+              </tr>
+              <tr>
+                <td>.xs-s-m-l</td>
+                <td class="lighten-1 purple">230px</td>
+                <td class="lighten-1 blue">400px</td>
+                <td class="lighten-1 teal">600px</td>
+                <td class="lighten-1 turquoise">800px</td>
+              </tr>
+              <tr>
+                <td>.s</td>
+                <td class="lighten-0 blue">400px</td>
+                <td class="lighten-0 blue">400px</td>
+                <td class="lighten-0 blue">400px</td>
+                <td class="lighten-0 blue">400px</td>
+              </tr>
+              <tr>
+                <td>.s-m</td>
+                <td class="lighten-1 blue">400px</td>
+                <td class="lighten-1 blue">400px</td>
+                <td class="lighten-1 teal">600px</td>
+                <td class="lighten-1 teal">600px</td>
+              </tr>
+              <tr>
+                <td>.s-m-l</td>
+                <td class="lighten-0 blue">400px</td>
+                <td class="lighten-0 blue">400px</td>
+                <td class="lighten-0 teal">600px</td>
+                <td class="lighten-0 turquoise">800px</td>
+              </tr>
+              <tr>
+                <td>.m</td>
+                <td class="lighten-1 teal">600px</td>
+                <td class="lighten-1 teal">600px</td>
+                <td class="lighten-1 teal">600px</td>
+                <td class="lighten-1 teal">600px</td>
+              </tr>
+              <tr>
+                <td>.m-l</td>
+                <td class="lighten-0 teal">600px</td>
+                <td class="lighten-0 teal">600px</td>
+                <td class="lighten-0 turquoise">800px</td>
+                <td class="lighten-0 turquoise">800px</td>
+              </tr>
+              <tr>
+                <td>.l</td>
+                <td class="lighten-1 turquoise">800px</td>
+                <td class="lighten-1 turquoise">800px</td>
+                <td class="lighten-1 turquoise">800px</td>
+                <td class="lighten-1 turquoise">800px</td>
+              </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <div id="alt-hgroup" class="section scrollspy padding-top-xl">
+        <h2 class="header">Alternate Hgroup</h2>
+        <p class="caption">
+        Alt Hgroup creates height classes standard sizes that be customized for each screen size. Just make the default hgroup the height you want applied on the smallest devices, and then override it (if desired) to change the height on larger devices.
+        </p>
+      </div>
+      <section class="hgroup-200 hgroup-m400 hgroup-l600 grey lighten-2">
+        <div class="valign-middle">
+          <h1 class="margin-top-0">This is a page title</h1>
+          <h2 class="h-subhead">Try resizing your window to see the height of this banner change for small, medium, and large screens.</h2>
+          <code class="text-grey text-lighten-1">.hgroup-200.hgroup-m400.hgroup-l600</code>
+        </div><!-- .container -->
+      </section>
+
+<h3 class="light">Usage</h3>
+      <pre class="language-markup"><code class="language-markup">
+&lt;section class="hgroup-s200 hgroup-m400 hgroup-l600 grey lighten-2">
+  &lt;div class="valign-middle">
+    &lt;h1 class="margin-top-0">This is a page title&lt;/h1>
+    &lt;h2 class="h-subhead">Try resizing your window to see the height of this banner change for small, medium, and large screens.&lt;/h2>
+  &lt;/div>
+&lt;/section>
+      </code></pre>
+      <h5 class="margin-top-l">Standard banner heights</h5>
+      <table class="small">
+          <tbody>
+              <tr>
+                  <th>Height</th>  
+                  <th>All screens</th>  
+                  <th>XSmall screens<br>(and up)</th>  
+                  <th>Medium screens<br>(and up)</th>
+                  <th>Large screens<br>(and up)</th>
+              </tr>
+              <tr>
+                  <td>300px</td>
+                  <td><code>.hgroup-300</code></td>  
+                  <td><code>.hgroup-s300</code></td>  
+                  <td><code>.hgroup-m300</code></td>
+                  <td><code>.hgroup-l300</code></td>
+              </tr>
+              <tr>
+                  <td>530px</td>
+                  <td><code>.hgroup-530</code></td>  
+                  <td><code>.hgroup-s530</code></td>  
+                  <td><code>.hgroup-m530</code></td>
+                  <td><code>.hgroup-l530</code></td>
+              </tr>
+              <tr>
+                  <td>600px</td>
+                  <td><code>.hgroup-600</code></td>  
+                  <td><code>.hgroup-s600</code></td>  
+                  <td><code>.hgroup-m600</code></td>
+                  <td><code>.hgroup-l600</code></td>
+              </tr>
+          </tbody>
+      </table>
+      <h5 class="margin-top-l">All banner heights</h5>
+      <table class="small">
+          <tbody>
+              <tr>
+                  <th>Height</th>  
+                  <th>All screens</th>  
+                  <th>XSmall screens<br>(and up)</th>  
+                  <th>Medium screens<br>(and up)</th>
+                  <th>Large screens<br>(and up)</th>
+              </tr>
+              <tr>
+                  <td>200px</td>
+                  <td><code>.hgroup-200</code></td>  
+                  <td><code>.hgroup-s200</code></td>  
+                  <td><code>.hgroup-m200</code></td>
+                  <td><code>.hgroup-l200</code></td>
+              </tr>
+              <tr>
+                  <td>230px</td>
+                  <td><code>.hgroup-230</code></td>  
+                  <td><code>.hgroup-s230</code></td>  
+                  <td><code>.hgroup-m230</code></td>
+                  <td><code>.hgroup-l230</code></td>
+              </tr>
+              <tr>
+                  <td>300px</td>
+                  <td><code>.hgroup-300</code></td>  
+                  <td><code>.hgroup-s300</code></td>  
+                  <td><code>.hgroup-m300</code></td>
+                  <td><code>.hgroup-l300</code></td>
+              </tr>
+              <tr>
+                  <td>400px</td>
+                  <td><code>.hgroup-400</code></td>  
+                  <td><code>.hgroup-s400</code></td>  
+                  <td><code>.hgroup-m400</code></td>
+                  <td><code>.hgroup-l400</code></td>
+              </tr>
+              <tr>
+                  <td>500px</td>
+                  <td><code>.hgroup-500</code></td>  
+                  <td><code>.hgroup-s500</code></td>  
+                  <td><code>.hgroup-m500</code></td>
+                  <td><code>.hgroup-l500</code></td>
+              </tr>
+              <tr>
+                  <td>530px</td>
+                  <td><code>.hgroup-530</code></td>  
+                  <td><code>.hgroup-s530</code></td>  
+                  <td><code>.hgroup-m530</code></td>
+                  <td><code>.hgroup-l530</code></td>
+              </tr>
+              <tr>
+                  <td>600px</td>
+                  <td><code>.hgroup-600</code></td>  
+                  <td><code>.hgroup-s600</code></td>  
+                  <td><code>.hgroup-m600</code></td>
+                  <td><code>.hgroup-l600</code></td>
+              </tr>
+              <tr>
+                  <td>700px</td>
+                  <td><code>.hgroup-700</code></td>  
+                  <td><code>.hgroup-s700</code></td>  
+                  <td><code>.hgroup-m700</code></td>
+                  <td><code>.hgroup-l700</code></td>
+              </tr>
+              <tr>
+                  <td>800px</td>
+                  <td><code>.hgroup-800</code></td>  
+                  <td><code>.hgroup-s800</code></td>  
+                  <td><code>.hgroup-m800</code></td>
+                  <td><code>.hgroup-l800</code></td>
+              </tr>
+              <tr>
+                  <td>1000px</td>
+                  <td><code>.hgroup-1000</code></td>  
+                  <td><code>.hgroup-s1000</code></td>  
+                  <td><code>.hgroup-m1000</code></td>
+                  <td><code>.hgroup-l1000</code></td>
+              </tr>
+              <tr>
+                  <td>1200px</td>
+                  <td><code>.hgroup-1200</code></td>  
+                  <td><code>.hgroup-s1200</code></td>  
+                  <td><code>.hgroup-m1200</code></td>
+                  <td><code>.hgroup-l1200</code></td>
+              </tr>
+              <tr class="text-italic">
+                  <td>Auto*</td>
+                  <td><code>.hgroup-auto</code></td>  
+                  <td><code>.hgroup-sauto</code></td>  
+                  <td><code>.hgroup-mauto</code></td>
+                  <td><code>.hgroup-lauto</code></td>
+              </tr>
+          </tbody>
+      </table>
+      <p class="text-italic text-small">*Hgroup auto classes apply <strong>only</strong> to one screen size (as opposed to that size and up) and override the banner height and valign-middle properties inside it. Instead, the container grows to accommodate the content + 3em of padding on top and bottom.</p>
+    </div>
+    <div class="col hide-on-small-and-down m3 l2">
+      <div class="toc-wrapper">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#hgroup">Hgroup</a></li>
+            <li><a href="#hgroup-responsive">Responsive Hgroup</a></li>
+            <li><a href="#heights">Heights</a></li>
+            <li><a href="#alt-hgroup">Alt Hgroup</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- end row -->
+
+</div>
+
+    </main>
+    <% include ../partials/footerScripts.html %>
+    <% include ../partials/footerScripts-styleguide.html %>
+    <script>
+    var getScreenSize = (function(){
+      var my = {};
+      my.init = function(){
+        doGet();
+        $( window ).resize(function() {
+         console.log('resizing');
+         doGet();
+        });
+      };
+      doGet = function(){
+        var windowWidth = $(window).width();
+        $('.js-screen-width').text(windowWidth + 'px');
+        var widthName;
+        if (windowWidth < 600) { widthName = 'Extra Small';} else if ((windowWidth > 600) && (windowWidth <= 992)) { widthName = "Small";} else if ((windowWidth > 992) && (windowWidth <= 1200)) { widthName = "Medium";} else if ((windowWidth > 1200) && (windowWidth <= 1600)) { widthName = "Large";} else if ((windowWidth > 1600)) { widthName = "Extra Large";}
+        $('.js-screen-width-name').text(widthName);
+      };
+      return my;
+    }());//getScreenSize
+    jQueryLoadListener.Deferred.execute(function(){
+      getScreenSize.init();
+    });
+
+    </script>
+  </body>
+</html>

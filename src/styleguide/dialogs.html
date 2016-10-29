@@ -1,0 +1,154 @@
+<html lang="en">
+  <head>
+    <!-- include common head -->
+    <% include ../partials/head.html %>
+    <!-- include styleguide head -->
+    <% include ./partials/head.html %>
+    <!-- page-specific head -->
+    <meta name="description" content="Meta description">
+  </head>
+  <body class="styleguide">
+    <header>
+    <% include ./partials/left-rail.html %>
+    </header>
+    <main><div class="container">
+  <div class="row">
+    <div class="col xs12 m9 l10">
+
+      <div id="toast" class="section scrollspy">
+        <p class="caption">Dialogs are content that are not original visible on a page but show up with extra information if needed. The transitions should make the appearance of the dialog make sense and not jarring to the user.</p>
+        <h2 class="header">Toasts</h2>
+        <p>Materialize provides an easy way for you to send unobtrusive alerts to your users through toasts. These toasts are also placed and sized responsively, try it out by clicking the button below on different device sizes.</p>
+        <a class="waves-effect waves-light btn" onclick="Materialize.toast('I am a toast', 4000)">Toast!</a>
+        <p>To do this, call the Materialize.toast() function programatically in JavaScript.</p>
+        <pre class=" language-javascript"><code class=" language-javascript">
+  <span class="token comment" spellcheck="true">// Materialize.toast(message, displayLength, className, completeCallback);
+</span>  Materialize<span class="token punctuation">.</span><span class="token function">toast</span><span class="token punctuation">(</span><span class="token string">'I am a toast!'</span><span class="token punctuation">,</span> <span class="token number">4000</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 4000 is the duration of the toast
+</span>        </code></pre>
+        <p>One way to add this into your application is to add this as an onclick event to a button</p>
+        <pre class=" language-markup"><code class=" language-markup">
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn<span class="token punctuation">"</span></span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Materialize.toast('I am a toast', 4000)<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Toast!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+        </code></pre>
+
+        <h4>Custom HTML</h4>
+        <p>You can pass in an HTML String as the first argument as well. Take a look at the example below, where we pass in text as well as a flat button. If you call an external function instead of in-line JavaScript, you will not need to escape quotation marks. </p>
+        <a class="waves-effect waves-light btn" onclick="displayCustomHTMLToast()">Toast with Action</a>
+        <pre class=" language-javascript"><code class=" language-javascript">
+  <span class="token keyword">var</span> $toastContent <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'&lt;span&gt;I am toast content&lt;/span&gt;'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Materialize<span class="token punctuation">.</span><span class="token function">toast</span><span class="token punctuation">(</span>$toastContent<span class="token punctuation">,</span> <span class="token number">5000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        </code></pre>
+
+        <h4>Callback</h4>
+        <p>You can have the toast callback a function when it has been dismissed</p>
+        <a class="btn" onclick="Materialize.toast('I am a toast', 4000,'',function(){alert('Your toast was dismissed')})">Toast!</a>
+        <pre class=" language-markup"><code class=" language-markup">
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn<span class="token punctuation">"</span></span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Materialize.toast('I am a toast', 4000,'',function(){alert('Your toast was dismissed')})<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Toast!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+        </code></pre>
+
+        <h4>Styling Toasts</h4>
+        <p>We've added the ability to customize your toasts easily. You can pass in classes as an optional parameter into the toast function. We've added a rounded class for you, but you can create your own CSS classes and apply them to toasts. Checkout out our full example below.</p>
+
+        <a class="waves-effect waves-light btn" onclick="Materialize.toast('I am a toast!', 3000, 'rounded')">Round Toast!</a>
+
+        <pre class=" language-javascript"><code class=" language-javascript">
+  Materialize<span class="token punctuation">.</span><span class="token function">toast</span><span class="token punctuation">(</span><span class="token string">'I am a toast!'</span><span class="token punctuation">,</span> <span class="token number">3000</span><span class="token punctuation">,</span> <span class="token string">'rounded'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 'rounded' is the class I'm applying to the toast
+</span>        </code></pre>
+      </div>
+
+
+
+      <!-- Tooltip Section -->
+      <div id="tooltip" class="scrollspy section">
+        <h2 class="header">Tooltips</h2>
+
+        <p>Tooltips are small, interactive, textual hints for mainly graphical elements. When using icons for actions you can use a tooltip to give people clarification on its function.</p>
+        <div class="row">
+          <a class="btn tooltipped col xs4 offset-s4 l2 offset-l1" data-position="bottom" data-delay="50" data-tooltip="I am tooltip" data-tooltip-id="5ed9be07-024c-de86-fc9f-eeb799540fc0"> Bottom</a>
+          <a class="btn tooltipped col xs4 offset-s4 l2 offset-l1" data-position="top" data-delay="50" data-tooltip="I am tooltip" data-tooltip-id="4b77b917-5840-3e6b-b846-cc0e08b15163"> Top</a>
+          <a class="btn tooltipped col xs4 offset-s4 l2 offset-l1" data-position="left" data-delay="50" data-tooltip="I am tooltip" data-tooltip-id="e1c07a1b-cbb0-6a6e-d01b-9c7db35b7559"> Left</a>
+          <a class="btn tooltipped col xs4 offset-s4 l2 offset-l1" data-position="right" data-delay="50" data-tooltip="I am tooltip" data-tooltip-id="dc639f3c-0465-92cb-e274-dc9ff89ae7a7"> Right</a>
+        </div>
+
+
+        <p>Add the Tooltipped class to your element and add either top, bottom, left, right on data-tooltip to control the position.</p>
+        <pre class=" language-markup"><code class=" language-markup">
+  <span class="token comment" spellcheck="true">&lt;!-- data-position can be : bottom, top, left, or right --&gt;</span>
+  <span class="token comment" spellcheck="true">&lt;!-- data-delay controls delay before tooltip shows (in milliseconds)--&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn tooltipped<span class="token punctuation">"</span></span> <span class="token attr-name">data-position</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bottom<span class="token punctuation">"</span></span> <span class="token attr-name">data-delay</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>50<span class="token punctuation">"</span></span> <span class="token attr-name">data-tooltip</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>I am tooltip<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Hover me!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+        </code></pre>
+        <br>
+        <h4>Initialization</h4>
+        <p>Tooltips are initialized automatically, but if you have dynamically added tooltips, you will need to initialize them.</p>
+        <pre class=" language-javascript"><code class=" language-javascript">
+  <span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.tooltipped'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">tooltip</span><span class="token punctuation">(</span><span class="token punctuation">{</span>delay<span class="token punctuation">:</span> <span class="token number">50</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        </code></pre>
+
+        <br>
+        <h4>jQuery Plugin Options</h4>
+        <table class="highlight">
+          <thead>
+            <tr>
+                <th>Option Name</th>
+                <th>Description</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>delay</td>
+              <td>Delay time before tooltip appears. (Default: 350)</td>
+            </tr>
+            <tr>
+              <td>tooltip</td>
+              <td>Tooltip text. Can use custom HTML if you set the html option.</td>
+            </tr>
+            <tr>
+              <td>position</td>
+              <td>Set the direction of the tooltip. 'top', 'right', 'bottom', 'left'. (Default: 'bottom')</td>
+            </tr>
+            <tr>
+              <td>html</td>
+              <td>Allow custom html inside the tooltip. (Default: false)</td>
+            </tr>
+            <tr>
+              <td>clickToOpen</td>
+              <td>Required tooltip trigger to be clicked to pop up tooltip. (Default: false)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br>
+        <h4>Removal</h4>
+        <p>To remove the tooltip from the button, pass in <code class=" language-javascript"><span class="token string">'remove'</span></code> as the option to the tooltip function</p>
+        <pre class=" language-javascript"><code class=" language-javascript">
+  <span class="token comment" spellcheck="true">// This will remove the tooltip functionality for the buttons on this page
+</span>  <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.tooltipped'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">tooltip</span><span class="token punctuation">(</span><span class="token string">'remove'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        </code></pre>
+    </div>
+
+  </div>
+
+
+  <!-- Table of Contents -->
+  <div class="col hide-on-small-and-down m3 l2">
+    <div class="toc-wrapper pin-top" style="top: 0px;">
+      <div style="height: 1px;">
+        <ul class="section table-of-contents">
+          <li><a href="#toast" class="active">Toasts</a></li>
+          <li><a href="#tooltip">Tooltips</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+
+    </main>
+    <% include ../partials/footerScripts.html %>
+    <% include ../partials/footerScripts-styleguide.html %>
+  </body>
+</html>

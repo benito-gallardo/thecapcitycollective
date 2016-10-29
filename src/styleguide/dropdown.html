@@ -1,0 +1,133 @@
+<html lang="en">
+  <head>
+    <!-- include common head -->
+    <% include ../partials/head.html %>
+    <!-- include styleguide head -->
+    <% include ./partials/head.html %>
+    <!-- page-specific head -->
+    <meta name="description" content="Meta description">
+  </head>
+  <body class="styleguide">
+    <header>
+    <% include ./partials/left-rail.html %>
+    </header>
+    <main><div class="container">
+  <div class="row">
+    <div class="col xs12 m9 l10">
+
+      <div id="introduction" class="scrollspy section">
+        <h4>Introduction</h4>
+        <p>Add a dropdown list to any button. Make sure that the <code class=" language-markup">data-activates</code> attribute matches the id in the <code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span></code> tag. </p>
+        <p>You can add a divider with the <code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>divider<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span></code> tag. </p>
+        <a class="dropdown-button btn" href="#" data-activates="dropdown1">Drop Me!</a><ul id="dropdown1" class="dropdown-content">
+          <li><a href="#!">one</a></li>
+          <li><a href="#!">two</a></li>
+          <li class="divider"></li>
+          <li><a href="#!">three</a></li>
+        </ul>
+
+        <pre class=" language-markup"><code class=" language-markup">
+  <span class="token comment" spellcheck="true">&lt;!-- Dropdown Trigger --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span>'dropdown-button btn'</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span>'#'</span> <span class="token attr-name">data-activates</span><span class="token attr-value"><span class="token punctuation">=</span>'dropdown1'</span><span class="token punctuation">&gt;</span></span>Drop Me!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment" spellcheck="true">&lt;!-- Dropdown Structure --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span>'dropdown1'</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span>'dropdown-content'</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#!<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>one<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#!<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>two<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>divider<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#!<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>three<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+        </code></pre>
+      </div>
+
+      <div id="options" class="section scrollspy">
+        <h4>Options</h4>
+        <table class="striped">
+          <thead>
+            <tr>
+                <th>Option Name</th>
+                <th>Description</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>induration</td>
+              <td>The duration of the transition enter in milliseconds. Default: 300</td>
+            </tr>
+            <tr>
+              <td>outduration</td>
+              <td>The duration of the transition out in milliseconds. Default: 225</td>
+            </tr>
+            <tr>
+              <td>constrainwidth</td>
+              <td>If true, constrainWidth to the size of the dropdown activator. Default: true</td>
+            </tr>
+            <tr>
+              <td>hover</td>
+              <td>If true, the dropdown will open on hover. Default: false</td>
+            </tr>
+            <tr>
+              <td>gutter</td>
+              <td>This defines the spacing from the aligned edge. Default: 0</td>
+            </tr>
+            <tr>
+              <td>beloworigin</td>
+              <td>If true, the dropdown will show below the activator. Default: false</td>
+            </tr>
+            <tr>
+              <td>alignment</td>
+              <td>Defines the edge the menu is aligned to. Default: 'left'</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>To use these inline you have to add them as data attributes. If you want more dynamic control, you can define them using the jQuery plugin below. </p>
+        <pre class=" language-markup"><code class=" language-markup">
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span>'dropdown-button btn'</span> <span class="token attr-name">data-beloworigin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span>'#'</span> <span class="token attr-name">data-activates</span><span class="token attr-value"><span class="token punctuation">=</span>'dropdown1'</span><span class="token punctuation">&gt;</span></span>Drop Me!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+        </code></pre>
+      </div>
+
+
+
+      <div id="initialization" class="section scrollspy">
+        <h4>jQuery Plugin Initialization</h4>
+        <p>Initialization for dropdowns is only necessary if you create them dynamically.</p>
+        <pre class=" language-javascript"><code class=" language-javascript">
+  <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.dropdown-button'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">dropdown</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      inDuration<span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
+      outDuration<span class="token punctuation">:</span> <span class="token number">225</span><span class="token punctuation">,</span>
+      constrain_width<span class="token punctuation">:</span> <span class="token keyword">false</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// Does not change width of dropdown to that of the activator
+</span>      hover<span class="token punctuation">:</span> <span class="token keyword">true</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// Activate on hover
+</span>      gutter<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// Spacing from edge
+</span>      belowOrigin<span class="token punctuation">:</span> <span class="token keyword">false</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// Displays dropdown below the button
+</span>      alignment<span class="token punctuation">:</span> <span class="token string">'left'</span> <span class="token comment" spellcheck="true">// Displays dropdown with edge aligned to the left of button
+</span>    <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+        </code></pre>
+      </div>
+
+
+</div>
+
+    <!-- Table of Contents -->
+    <div class="col hide-on-small-and-down m3 l2">
+      <div class="toc-wrapper pin-top" style="top: 0px;">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#introduction" class="active">Introduction</a></li>
+            <li><a href="#options">Options</a></li>
+            <li><a href="#initialization">Initialization</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    </main>
+    <% include ../partials/footerScripts.html %>
+    <% include ../partials/footerScripts-styleguide.html %>
+  </body>
+</html>

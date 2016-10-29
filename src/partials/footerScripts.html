@@ -1,0 +1,77 @@
+
+<script type="text/javascript" src="/assets/javascript/global-admin.js"></script>
+<script type="text/javascript" src="/assets/javascript/global.min.js"></script>
+<script>
+jQueryLoadListener.Deferred.execute(function(){
+  $(document).ready(function(){
+   ((function($){ // Mobile Menu Drop Down
+     var mobileMenu = {
+       init: function(){
+         this.cacheDom();
+         this.showMenu();
+         this.removeStyleAttr();
+       },
+       cacheDom: function(){
+         this.$mobileButton = $('.mobile-button');
+         this.$mobileNav = $('nav .mobile-nav');
+       },
+       showMenu: function(){
+
+         mobileMenu.$mobileButton.click(function(e) {
+           if(mobileMenu.$mobileNav.is('.active')) {
+                mobileMenu.$mobileNav.slideUp(300).removeClass('active');
+             }
+             else {
+               mobileMenu.$mobileNav.slideDown(300).addClass('active');
+             }
+           e.preventDefault();
+         });
+       },
+       removeStyleAttr: function(){
+         $( window ).resize(function() {
+           if(mobileMenu.$mobileButton.css('display') == 'none')
+             mobileMenu.$mobileNav.removeAttr('style');
+         });
+       }
+     };
+     mobileMenu.init();  
+   })(jQuery));
+   
+
+   (function($){ // Sticky footer
+    
+    'use strict';
+
+     var footerHeight = {
+        cache:{
+          $footer: {},
+          $body: {}
+        },
+         init: function(){
+           this.cacheDom();
+           this.render();
+           this.resize();
+         },
+         cacheDom: function() {
+           this.cache.$footer = $('footer');
+           this.cache.$body = $('body');
+         },
+         render: function(){
+            //reset footer to auto to get natural size
+            this.cache.$footer.css('min-height', 'auto');
+            var elHeight = this.cache.$footer.outerHeight();
+            this.cache.$body.css('margin-bottom', elHeight + 'px');
+            this.cache.$footer.css('min-height', elHeight + 'px');
+         },
+         resize: function() {
+          var self = this;
+           $( window ).resize(function() {
+             self.render();
+           });
+         }
+       };
+     footerHeight.init();
+   })(jQuery);
+  })//document ready
+});
+</script>

@@ -1,0 +1,122 @@
+<html lang="en">
+  <head>
+    <!-- include common head -->
+    <% include ../partials/head.html %>
+    <!-- include styleguide head -->
+    <% include ./partials/head.html %>
+    <!-- page-specific head -->
+    <meta name="description" content="Meta description">
+  </head>
+  <body class="styleguide">
+    <header>
+    <% include ./partials/left-rail.html %>
+    </header>
+    <main><div class="container">
+  <div class="row">
+    <div class="col xs12 m9 l10">
+      <h1>Media</h1>
+      <p class="caption">Media components include things that have to do with large media objects like Images, Video, Audio, etc.</p>
+      <p class="text-em">Note: this page contains some errors that need to addressed</p>
+
+      <div id="materialbox" class="scrollspy section">
+        <h2 class="header">Material Box</h2>
+         <p class="caption">Material box is a material design implementation of the Lightbox plugin. When a user clicks on an image that can be enlarged. Material box centers the image and enlarges it in a smooth, non-jarring manner. To dismiss the image, the user can either click on the image again, scroll away, or press the ESC key.</p>
+        <div class="material-placeholder"><img class="materialboxed responsive-img" width="650" src="http://lorempixel.com/1024/768/abstract/1"></div>
+
+       <p>Creating the above image with the effect is as simple as adding a <code class=" language-markup">materialboxed</code> class to the image tag.</p>
+      <pre class=" language-markup"><code class=" language-markup">
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>materialboxed<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>650<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>images/sample-1.jpg<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      </code></pre>
+
+
+      <h4>Initialization</h4>
+       <p>Materialbox is intialized automatically. However, if you add images dynamically, you will have to add this initialization code.</p>
+       <pre class=" language-javascript"><code class=" language-javascript">
+  <span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.materialboxed'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">materialbox</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        </code></pre>
+
+        <h4>Captions</h4>
+        <p>It is very easy to add a short caption to your photo. Just add the caption as a <code class=" language-markup">data-caption</code> attribute.</p>
+        <div class="material-placeholder"><img class="materialboxed" data-caption="A picture of some deer and tons of trees" width="250" src="http://lorempixel.com/730/1095/abstract/2"></div>
+          <pre class=" language-markup"><code class=" language-markup">
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>materialboxed<span class="token punctuation">"</span></span> <span class="token attr-name">data-caption</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>A picture of some deer and tons of trees<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>250<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://th01.deviantart.net/fs70/PRE/i/2013/126/1/e/nature_portrait_by_pw_fotografie-d63tx0n.jpg<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          </code></pre>
+      </div>
+
+
+      <div id="materialboxgallery" class="scrollspy section">
+        <h2 class="header">Material Box Gallery</h2>
+         <p class="caption">Material box gallery works just like Material Box, but it lets you group multiple images together in a clickable/swipable gallery. To dismiss the gallery, the user can either click on the image again, scroll away, or press the ESC key.</p>
+        <div data-gallery="featured">
+          <div class="row">
+            <div class="col xs12 s4 margin-bottom-s">
+              <img class="materialboxedgallery responsive-img" src="http://lorempixel.com/480/320/abstract/1">
+            </div>
+            <div class="col xs12 s4 margin-bottom-s">
+              <img class="materialboxedgallery responsive-img" src="http://lorempixel.com/480/320/abstract/1">
+            </div>
+            <div class="col xs12 s4 margin-bottom-s">
+              <img class="materialboxedgallery responsive-img" src="http://lorempixel.com/480/320/abstract/1">
+            </div>
+          </div>
+        </div>
+
+       <p>Creating the above image with the effect is as simple as adding a <code class=" language-markup">materialboxed</code> class to the image tag, and wrapping the entire image group in an element with <code class=" language-markup">data-gallery="mygalleryname"</code>. To include multiple galleries on one page, just wrap each image group in a unique data-gallery attribute.</p>
+      <pre class=" language-markup"><code class=" language-markup">
+&lt;div data-gallery="featuredGallery">
+  &lt;img class="materialboxedgallery responsive-img" src="sample-image-1.jpg">
+  &lt;img class="materialboxedgallery responsive-img" src="sample-image-2.jpg">
+  &lt;img class="materialboxedgallery responsive-img" src="sample-image-3.jpg">
+&lt;/div>
+      </code></pre>
+
+
+      <h4>Initialization</h4>
+       <p>Materialbox is intialized automatically. However, if you add images dynamically, you will have to add this initialization code.</p>
+       <pre class=" language-javascript"><code class=" language-javascript">
+  <span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.materialboxedgallery'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">materialboxgallery</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        </code></pre>
+
+        <h4>Captions</h4>
+        <p>It is very easy to add a short caption to your photos. Just add the caption as a <code class=" language-markup">data-caption</code> attribute.</p>
+        <div class="material-placeholder"><img class="materialboxed" data-caption="A picture of some deer and tons of trees" width="250" src="http://lorempixel.com/730/1095/abstract/2"></div>
+          <pre class=" language-markup"><code class=" language-markup">
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>materialboxed<span class="token punctuation">"</span></span> <span class="token attr-name">data-caption</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>A picture of some deer and tons of trees<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>250<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://th01.deviantart.net/fs70/PRE/i/2013/126/1/e/nature_portrait_by_pw_fotografie-d63tx0n.jpg<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          </code></pre>
+      </div>
+
+    </div>
+
+
+    <!-- Table of Contents -->
+    <div class="col hide-on-small-only m3 l2">
+      <div class="toc-wrapper pin-top" style="top: 0px;">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#materialbox" class="active">Material Box</a></li>
+            <li><a href="#materialboxgallery" class="active">Material Box Gallery</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    </main>
+    <% include ../partials/footerScripts.html %>
+    <% include ../partials/footerScripts-styleguide.html %>
+    <script>
+    jQueryLoadListener.Deferred.execute(function(){
+      $('.materialboxed').materialbox();
+      $('.slider').slider({full_width: true});
+      $('.carousel').carousel();
+    });
+    </script>
+  </body>
+</html>

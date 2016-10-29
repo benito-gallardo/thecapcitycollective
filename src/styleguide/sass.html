@@ -1,0 +1,103 @@
+<html lang="en">
+  <head>
+    <!-- include common head -->
+    <% include ../partials/head.html %>
+    <!-- include styleguide head -->
+    <% include ./partials/head.html %>
+    <!-- page-specific head -->
+    <meta name="description" content="Meta description">
+  </head>
+  <body class="styleguide">
+    <header>
+    <% include ./partials/left-rail.html %>
+    </header>
+    <main><div class="container">
+  <div class="row">
+
+    <div class="col xs12 m9 l10">
+
+      <!--    Prefixer Section-->
+      <div id="prefixer" class="section scrollspy">
+        <h2 class="header">Prefixer</h2>
+        <p class="caption">
+        One major goal of this framework is to be as adaptable as possible which includes cross browser compatibility. We have adapted a prefixer script to Sass which will automatically add all browser prefixes for certain CSS properties.
+        </p>
+
+
+        For Example: Using this Sass mixin
+        <pre class=" language-scss"><code class=" language-scss">
+  <span class="token keyword">@include</span> <span class="token function">transition</span>(.3s)<span class="token punctuation">;</span>
+        </code></pre>
+        Will Output This
+        <pre class=" language-css"><code class=" language-css">
+  <span class="token property">-webkit-transition</span><span class="token punctuation">:</span> 0.3s<span class="token punctuation">;</span>
+  <span class="token property">-moz-transition</span><span class="token punctuation">:</span> 0.3s<span class="token punctuation">;</span>
+  <span class="token property">-o-transition</span><span class="token punctuation">:</span> 0.3s<span class="token punctuation">;</span>
+  <span class="token property">-ms-transition</span><span class="token punctuation">:</span> 0.3s<span class="token punctuation">;</span>
+  <span class="token property">transition</span><span class="token punctuation">:</span> 0.3s<span class="token punctuation">;</span>
+        </code></pre>
+      </div>
+      <div id="mixins" class="section scrollspy">
+        <h2 class="header">Mixins</h2>
+        <p class="caption">
+          Here is the full list of mixins
+        </p>
+        <pre class=" language-css"><code class=" language-css">
+  <span class="token function">animation</span>($args)
+  <span class="token function">animation-delay</span>($delay)
+  <span class="token function">animation-direction</span>($direction)
+  <span class="token function">animation-duration</span>($duration)
+  <span class="token function">animation-fill-mode</span>($mode)
+  <span class="token function">animation-iteration-count</span>($count)
+  <span class="token function">animation-name</span>($name)
+  <span class="token function">animation-play-state</span>($state)
+  <span class="token function">animation-timing-function</span>($function)
+  <span class="token function">background-size</span>($args)
+  <span class="token function">box-sizing</span>($args)
+      <span class="token function">border-box</span>()
+      <span class="token function">content-box</span>()
+  <span class="token function">columns</span>($args)
+      <span class="token function">column-count</span>($count)
+      <span class="token function">column-gap</span>($gap)
+      <span class="token function">column-rule</span>($args)
+      <span class="token function">column-width</span>($width)
+  <span class="token function">gradient</span>($default,$start,$stop)
+      <span class="token function">linear-gradient-top</span>($default,$color1,$stop1,$color2,$stop2,[$color3,$stop3,$color4,$stop4])
+      <span class="token function">linear-gradient-left</span>($default,$color1,$stop1,$color2,$stop2,[$color3,$stop3,$color4,$stop4])
+  <span class="token function">transform</span>($args)
+      <span class="token function">transform-origin</span>($args)
+      <span class="token function">transform-style</span>($style)
+      <span class="token function">rotate</span>($deg)
+      <span class="token function">scale</span>($factor)
+      <span class="token function">translate</span>($x,$y)
+      <span class="token function">translate3d</span>($x,$y,$z)
+      <span class="token function">translateHardware</span>($x,$y)
+  <span class="token function">text-shadow</span>($args)
+  <span class="token function">transition</span>($args)
+      <span class="token function">transition-delay</span>($delay)
+      <span class="token function">transition-duration</span>($duration)
+      <span class="token function">transition-property</span>($property)
+      <span class="token function">transition-timing-function</span>($function)
+        </code></pre>
+      </div>
+    </div>
+    <div class="col hide-on-small-and-down m3 l2">
+      <div class="toc-wrapper pinned" style="top: 0px;">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#prefixer">Prefixer</a></li>
+            <li><a href="#mixins">Mixins</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- end row -->
+
+</div>
+
+    </main>
+    <% include ../partials/footerScripts.html %>
+    <% include ../partials/footerScripts-styleguide.html %>
+  </body>
+</html>

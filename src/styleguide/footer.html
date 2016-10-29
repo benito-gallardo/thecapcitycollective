@@ -1,0 +1,81 @@
+<html lang="en">
+  <head>
+    <!-- include common head -->
+    <% include ../partials/head.html %>
+    <!-- include styleguide head -->
+    <% include ./partials/head.html %>
+    <!-- page-specific head -->
+    <meta name="description" content="Meta description">
+  </head>
+  <body class="styleguide">
+    <header>
+    <% include ./partials/left-rail.html %>
+    </header>
+    <main><div class="container">
+  <div class="row">
+
+    <div class="col xs12 m9 l10">
+
+    <!--  Footer Section-->
+      <div id="footer" class="section scrollspy">
+        <h1>Footers</h1>
+        <p class="caption">Footers variations combine footer components in different ways. Click through the tabs to preview all of the footer variations.</p>
+
+        <div class="row">
+          <div class="col xs12">
+            <ul class="tabs overflow-hidden">
+              <li class="tab col xs3"><a class="active" href="#test1">Full footer</a></li>
+              <li class="tab col xs3"><a href="#test2">No logos</a></li>
+              <li class="tab col xs3"><a href="#test3">Minimal dark</a></li>
+              <li class="tab col xs3"><a href="#test4">Minimal light</a></li>
+            </ul>
+          </div>
+          <div id="test1" class="col xs12">
+            <h2>Footer A: Full footer</h2>
+            [%- partial('/partials/footer/footer-a-full') %]
+          </div>
+          <div id="test2" class="col xs12">
+            <h2>Footer B: Footer without client logos</h2>
+            [%- partial('/partials/footer/footer-b-no-clients') %]
+          </div>
+          <div id="test3" class="col xs12">
+            <h2>Footer C: Minimal dark footer</h2>
+            [%- partial('/partials/footer/footer-c-minimal-dark') %]
+          </div>
+          <div id="test4" class="col xs12">
+            <h2>Footer D: Minimal light footer</h2>
+            [%- partial('/partials/footer/footer-d-minimal-light') %]
+          </div>
+        </div>
+
+
+
+
+
+
+       
+
+      </div> <!-- End of footer section -->
+
+    </div>
+
+    <div class="col hide-on-small-and-down m3 l2">
+      <div class="toc-wrapper pin-top" style="top: 0px;">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#footer" class="active">Footer</a></li>
+            <li><a href="#sticky-footer" class="">Sticky Footer</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    </main>
+    <% include ../partials/footerScripts.html %>
+    <% include ../partials/footerScripts-styleguide.html %>
+  </body>
+</html>

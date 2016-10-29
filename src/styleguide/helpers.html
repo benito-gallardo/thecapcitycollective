@@ -1,0 +1,585 @@
+<html lang="en">
+  <head>
+    <!-- include common head -->
+    <% include ../partials/head.html %>
+    <!-- include styleguide head -->
+    <% include ./partials/head.html %>
+    <!-- page-specific head -->
+    <meta name="description" content="Meta description">
+  </head>
+  <body class="styleguide">
+    <header>
+    <% include ./partials/left-rail.html %>
+    </header>
+    <main><div class="container">
+  <div class="row">
+
+    <div class="col xs12 m9 l10">
+
+      <!--  Valign Section-->
+      <div id="valign" class="section scrollspy">
+        <h2 class="header">Alignment</h2>
+        <p class="caption">We have easy to use classes to help you align your content.</p>
+
+        <h3 class="light">Vertical Align</h3>
+        <p>You can easily vertically center things by adding the class <code class="language-markup">valign-wrapper</code> to the container holding the items you want to vertically align.</p>
+        <div class="valign-demo valign-wrapper">
+          <h3 class="valign center full-width">This should be vertically aligned</h3>
+        </div>
+        <pre class="language-markup"><code class="language-markup">
+&lt;div class="valign-wrapper">
+  &lt;h3 class="valign">This should be vertically aligned&lt;/h3>
+&lt;/div>
+        </code></pre><br>
+
+        <h3>Alternate</h3>
+        <div class="grey lighten-2" style="height:200px;">
+          <h3 class="valign-middle">This should be vertically aligned</h3>
+        </div>
+        <pre class="language-markup"><code class="language-markup">
+&lt;div class="grey lighten-2" style="height:200px;">
+  &lt;h3 class="valign-middle">This should be vertically aligned&lt;/h3>
+&lt;/div>
+        </code></pre><br>
+      </div>
+
+      <div class="section">
+        <h2 class="light">Quick Floats</h2>
+        <p>Quickly float things by adding the class <code class="language-markup">left</code> or <code class="language-markup">right</code> to the element. <code class="language-markup">!important</code> is used to avoid specificity issues.</p>
+        <pre class="language-markup"><code class="language-markup">
+&lt;div class="left">...&lt;/div>
+&lt;div class="right">...&lt;/div>
+        </code></pre><br>
+
+      </div><!--  End Valign Section  -->
+
+      <!--  Truncation Section-->
+      <div id="truncation" class="section scrollspy">
+        <h2 class="header">Truncation</h2>
+        <p>To truncate long lines of text in an ellipsis, add the class <code class="language-markup">truncate</code> to the tag which contains the text. See an example below of a header being truncated inside a card.</p>
+
+        <div class="row">
+          <div class="col xs6 offset-s3 m6 offset-m3">
+            <div class="card-panel">
+              <h4 class="truncate">This is an extremely long title that will be truncated</h4>
+            </div>
+          </div>
+        </div>
+
+        <pre class="language-markup"><code class="language-markup">
+  &lt;h4 class="truncate">This is an extremely long title that will be truncated&lt;/h4>
+        </code></pre><br>
+
+      </div><!--  End Truncation Section  -->
+
+      <!--  Margin & Padding Section-->
+      <div id="margin-padding" class="section scrollspy">
+        <h2 class="header">Margin &amp; Padding</h2>
+        <p>These classes help format various content on your site.</p>
+        <h3>Margin</h3>
+        <div class="row">
+          <div class="col xs2">
+            <div class="grey text-trans-white margin-bottom-0">.margin-bottom-0</div>
+            <div class="grey lighten-1">&nbsp;</div>
+          </div>
+          <div class="col xs2">
+            <div class="grey text-trans-white margin-bottom-xs">.margin-bottom-xs</div>
+            <div class="grey lighten-1">&nbsp;</div>
+          </div>
+          <div class="col xs2">
+            <div class="grey text-trans-white margin-bottom-s">.margin-bottom-s</div>
+            <div class="grey lighten-1">&nbsp;</div>
+          </div>
+          <div class="col xs2">
+            <div class="grey text-trans-white margin-bottom-m">.margin-bottom-m</div>
+            <div class="grey lighten-1">&nbsp;</div>
+          </div>
+          <div class="col xs2">
+            <div class="grey text-trans-white margin-bottom-l">.margin-bottom-l</div>
+            <div class="grey lighten-1">&nbsp;</div>
+          </div>
+          <div class="col xs2">
+            <div class="grey text-trans-white margin-bottom-xl">.margin-bottom-xl</div>
+            <div class="grey lighten-1">&nbsp;</div>
+          </div>
+        </div>
+
+        <h3>Padding</h3>
+        <div class="row">
+          <div class="col xs2">
+            <div class="grey text-trans-white padding-bottom-0">.padding-bottom-0</div>
+            <div class="grey lighten-1">&nbsp;</div>
+          </div>
+          <div class="col xs2">
+            <div class="grey text-trans-white padding-bottom-xs">.padding-bottom-xs</div>
+            <div class="grey lighten-1">&nbsp;</div>
+          </div>
+          <div class="col xs2">
+            <div class="grey text-trans-white padding-bottom-s">.padding-bottom-s</div>
+            <div class="grey lighten-1">&nbsp;</div>
+          </div>
+          <div class="col xs2">
+            <div class="grey text-trans-white padding-bottom-m">.padding-bottom-m</div>
+            <div class="grey lighten-1">&nbsp;</div>
+          </div>
+          <div class="col xs2">
+            <div class="grey text-trans-white padding-bottom-l">.padding-bottom-l</div>
+            <div class="grey lighten-1">&nbsp;</div>
+          </div>
+          <div class="col xs2">
+            <div class="grey text-trans-white padding-bottom-xl">.padding-bottom-xl</div>
+            <div class="grey lighten-1">&nbsp;</div>
+          </div>
+        </div>
+
+
+
+        <h3 class="light margin-top-xl">Positive Margin</h3>
+        <table class="small">
+          <tbody>
+              <tr>
+                  <th>&nbsp;</th>
+                  <th>All sides</th>
+                  <th>Top</th>
+                  <th>Right</th>
+                  <th>Bottom</th>
+                  <th>Left</th>
+              </tr>
+              <tr>
+                  <td>0rem</td>
+                  <td><code>.margin-0</code></td>
+                  <td><code>.margin-top-0</code></td>
+                  <td><code>.margin-right-0</code></td>
+                  <td><code>.margin-bottom-0</code></td>
+                  <td><code>.margin-left-0</code></td>
+              </tr>
+              <tr>
+                  <td>0.5rem</td>
+                  <td><code>.margin-xs</code></td>
+                  <td><code>.margin-top-xs</code></td>
+                  <td><code>.margin-right-xs</code></td>
+                  <td><code>.margin-bottom-xs</code></td>
+                  <td><code>.margin-left-xs</code></td>
+              </tr>
+              <tr>
+                  <td>1rem</td>
+                  <td><code>.margin-s</code></td>
+                  <td><code>.margin-top-s</code></td>
+                  <td><code>.margin-right-s</code></td>
+                  <td><code>.margin-bottom-s</code></td>
+                  <td><code>.margin-left-s</code></td>
+              </tr>
+              <tr>
+                  <td>2rem</td>
+                  <td><code>.margin-m</code></td>
+                  <td><code>.margin-top-m</code></td>
+                  <td><code>.margin-right-m</code></td>
+                  <td><code>.margin-bottom-m</code></td>
+                  <td><code>.margin-left-m</code></td>
+              </tr>
+              <tr>
+                  <td>3rem</td>
+                  <td><code>.margin-l</code></td>
+                  <td><code>.margin-top-l</code></td>
+                  <td><code>.margin-right-l</code></td>
+                  <td><code>.margin-bottom-l</code></td>
+                  <td><code>.margin-left-l</code></td>
+              </tr>
+              <tr>
+                  <td>5rem</td>
+                  <td><code>.margin-xl</code></td>
+                  <td><code>.margin-top-xl</code></td>
+                  <td><code>.margin-right-xl</code></td>
+                  <td><code>.margin-bottom-xl</code></td>
+                  <td><code>.margin-left-xl</code></td>
+              </tr>
+          </tbody>
+      </table>
+
+      <h3 class="light margin-top-xl">Negative Margin</h3>
+        <table class="small">
+          <tbody>
+              <tr>
+                  <td>&nbsp;</td>
+                  <th>All sides</th>
+                  <th>Top</th>
+                  <th>Right</th>
+                  <th>Bottom</th>
+                  <th>Left</th>
+              </tr>
+              <tr>
+                  <td>0rem</td>
+                  <td><code>.margin-0</code></td>
+                  <td><code>.margin-top-0</code></td>
+                  <td><code>.margin-right-0</code></td>
+                  <td><code>.margin-bottom-0</code></td>
+                  <td><code>.margin-left-0</code></td>
+              </tr>
+              <tr>
+                  <td>-0.5rem</td>
+                  <td><code>.neg-margin-xs</code></td>
+                  <td><code>.neg-margin-top-xs</code></td>
+                  <td><code>.neg-margin-right-xs</code></td>
+                  <td><code>.neg-margin-bottom-xs</code></td>
+                  <td><code>.neg-margin-left-xs</code></td>
+              </tr>
+              <tr>
+                  <td>-1rem</td>
+                  <td><code>.neg-margin-s</code></td>
+                  <td><code>.neg-margin-top-s</code></td>
+                  <td><code>.neg-margin-right-s</code></td>
+                  <td><code>.neg-margin-bottom-s</code></td>
+                  <td><code>.neg-margin-left-s</code></td>
+              </tr>
+              <tr>
+                  <td>-2rem</td>
+                  <td><code>.neg-margin-m</code></td>
+                  <td><code>.neg-margin-top-m</code></td>
+                  <td><code>.neg-margin-right-m</code></td>
+                  <td><code>.neg-margin-bottom-m</code></td>
+                  <td><code>.neg-margin-left-m</code></td>
+              </tr>
+              <tr>
+                  <td>-3rem</td>
+                  <td><code>.neg-margin-l</code></td>
+                  <td><code>.neg-margin-top-l</code></td>
+                  <td><code>.neg-margin-right-l</code></td>
+                  <td><code>.neg-margin-bottom-l</code></td>
+                  <td><code>.neg-margin-left-l</code></td>
+              </tr>
+              <tr>
+                  <td>-5rem</td>
+                  <td><code>.neg-margin-xl</code></td>
+                  <td><code>.neg-margin-top-xl</code></td>
+                  <td><code>.neg-margin-right-xl</code></td>
+                  <td><code>.neg-margin-bottom-xl</code></td>
+                  <td><code>.neg-margin-left-xl</code></td>
+              </tr>
+          </tbody>
+      </table>
+
+      <h3 class="light margin-top-xl">Padding</h3>
+        <table class="small">
+          <tbody>
+              <tr>
+                  <th>&nbsp;</th>
+                  <th>All sides</th>
+                  <th>Top</th>
+                  <th>Right</th>
+                  <th>Bottom</th>
+                  <th>Left</th>
+              </tr>
+              <tr>
+                  <td>0rem</td>
+                  <td><code>.padding-0</code></td>
+                  <td><code>.padding-top-0</code></td>
+                  <td><code>.padding-right-0</code></td>
+                  <td><code>.padding-bottom-0</code></td>
+                  <td><code>.padding-left-0</code></td>
+              </tr>
+              <tr>
+                  <td>0.5rem</td>
+                  <td><code>.padding-xs</code></td>
+                  <td><code>.padding-top-xs</code></td>
+                  <td><code>.padding-right-xs</code></td>
+                  <td><code>.padding-bottom-xs</code></td>
+                  <td><code>.padding-left-xs</code></td>
+              </tr>
+              <tr>
+                  <td>1rem</td>
+                  <td><code>.padding-s</code></td>
+                  <td><code>.padding-top-s</code></td>
+                  <td><code>.padding-right-s</code></td>
+                  <td><code>.padding-bottom-s</code></td>
+                  <td><code>.padding-left-s</code></td>
+              </tr>
+              <tr>
+                  <td>2rem</td>
+                  <td><code>.padding-m</code></td>
+                  <td><code>.padding-top-m</code></td>
+                  <td><code>.padding-right-m</code></td>
+                  <td><code>.padding-bottom-m</code></td>
+                  <td><code>.padding-left-m</code></td>
+              </tr>
+              <tr>
+                  <td>3rem</td>
+                  <td><code>.padding-l</code></td>
+                  <td><code>.padding-top-l</code></td>
+                  <td><code>.padding-right-l</code></td>
+                  <td><code>.padding-bottom-l</code></td>
+                  <td><code>.padding-left-l</code></td>
+              </tr>
+              <tr>
+                  <td>5rem</td>
+                  <td><code>.padding-xl</code></td>
+                  <td><code>.padding-top-xl</code></td>
+                  <td><code>.padding-right-xl</code></td>
+                  <td><code>.padding-bottom-xl</code></td>
+                  <td><code>.padding-left-xl</code></td>
+              </tr>
+          </tbody>
+      </table>
+
+      </div><!--  End Margin & Padding Section  -->
+
+      <!--  Display Section-->
+      <div id="display" class="section scrollspy">
+        <h2 class="header">Display</h2>
+        <p>These classes affect the display attribute of an element.</p>
+        <table class="striped">
+          <tr>
+            <th>Class</th>
+            <th>Attribute</th>
+          </tr>
+          <tr>
+            <td><code>.display-block or .db</code></td>
+            <td>display: block</td>
+          </tr>
+          <tr>
+            <td><code>.display-inline or .di</code></td>
+            <td>display: inline</td>
+          </tr>
+          <tr>
+            <td><code>.display-inline-block or .dib</code></td>
+            <td>display: inline-block</td>
+          </tr>
+          <tr>
+            <td><code>.center-block</code></td>
+            <td>margin: 0 auto; float: none;</td>
+          </tr>
+        </table>
+      </div>
+      <!--  End Display Section-->
+
+      <!--  Width Section-->
+      <div id="width" class="section scrollspy">
+        <h2 class="header">Width &amp; Height</h2>
+        <p>These classes affect the width/height of an element.</p>
+        <table class="striped">
+          <tr>
+            <th>Class</th>
+            <th>Attribute</th>
+          </tr>
+          <tr>
+            <td><code>.max-width</code></td>
+            <td>max-width: 100%;</td>
+          </tr>
+          <tr>
+            <td><code>.full-width</code></td>
+            <td>width: 100%</td>
+          </tr>
+          <tr>
+            <td><code>.full-height</code></td>
+            <td>height: 100%</td>
+          </tr>
+          <tr>
+            <td><code>.width-auto</code></td>
+            <td>width: auto</td>
+          </tr>
+          <tr>
+            <td><code>.height-auto</code></td>
+            <td>height: auto</td>
+          </tr>
+        </table>
+      </div>
+      <!--  End Width Section-->
+
+
+
+
+
+      <!--  Show & Hide Section-->
+      <div id="show-hide" class="section scrollspy">
+        <h2 class="header">Show &amp; Hide</h2>
+        <p>These classes show and hide various content on your site. They are especially useful in conjunction with <a href="/styleguide/media-queries">media queries</a>.</p>
+        <table>
+          <tr>
+            <th></th>
+          </tr>
+          <tr>
+            <td><code>.show</code></td>
+            <td>display: block</td>
+            <td>shows element</td>
+          </tr>
+          <tr>
+            <td><code>.hide</code></td>
+            <td>display: none</td>
+            <td>hides element</td>
+          </tr>
+        </table>
+      </div>
+      <!--  End Show & Hide Section-->
+
+      <!--  Display Section-->
+      <div id="position" class="section scrollspy">
+        <h2 class="header">Position</h2>
+        <p>These classes affect the position attribute of an element.</p>
+        <table class="striped">
+          <tr>
+            <th>Class</th>
+            <th>Attribute</th>
+          </tr>
+          <tr>
+            <td><code>.pos-r</code></td>
+            <td>position: relative</td>
+          </tr>
+          <tr>
+            <td><code>.pos-a</code></td>
+            <td>position: absolute</td>
+          </tr>
+          <tr>
+            <td><code>.position-s</code></td>
+            <td>position: static</td>
+          </tr>
+
+        </table>
+      </div>
+      <!--  End Display Section-->
+
+      <!--  Display Section-->
+      <div id="absolute-position" class="section scrollspy">
+        <h2 class="header">Absolute Positioning</h2>
+        <p>These classes will absolutely position an element in one of the four corners of its containing div.</p>
+        <table class="striped">
+          <tr>
+            <th>Inside</th>
+            <th>Outside</th>
+          </tr>
+          <tr>
+            <td><code>.abs-left-inside</code></td>
+            <td><code>.abs-left-outside</code></td>
+          </tr>
+          <tr>
+            <td><code>.abs-right-inside</code></td>
+            <td><code>.abs-right-outside</code></td>
+          </tr>
+          <tr>
+            <td><code>.abs-bottom-inside</code></td>
+            <td><code>.abs-bottom-outside</code></td>
+          </tr>
+          <tr>
+            <td><code>.abs-top-inside</code></td>
+            <td><code>.abs-top-outside</code></td>
+          </tr>
+          <tr>
+            <td><code>.abs-middle-top-inside</code></td>
+            <td><code>.abs-middle-top-outside</code></td>
+          </tr>
+          <tr>
+            <td><code>.abs-middle-bottom-inside</code></td>
+            <td><code>.abs-middle-bottom-outside</code></td>
+          </tr>
+          <tr>
+            <td><code>.abs-left-top-inside</code></td>
+            <td><code>.abs-left-top-outside</code></td>
+          </tr>
+          <tr>
+            <td><code>.abs-left-middle-inside</code></td>
+            <td><code>.abs-left-middle-outside</code></td>
+          </tr>
+          <tr>
+            <td><code>.abs-left-bottom-inside</code></td>
+            <td><code>.abs-left-bottom-outside</code></td>
+          </tr>
+          <tr>
+            <td><code>.abs-right-top-inside</code></td>
+            <td><code>.abs-right-top-outside</code></td>
+          </tr>
+          <tr>
+            <td><code>.abs-right-middle-inside</code></td>
+            <td><code>.abs-right-middle-outside</code></td>
+          </tr>
+          <tr>
+            <td><code>.abs-right-bottom-inside</code></td>
+            <td><code>.abs-right-bottom-outside</code></td>
+          </tr>
+        </table>
+      </div>
+
+      <!--  End Display Section-->
+      <h3 class="header">Examples</h3>
+      <div class="row">
+        <div class="col xs8 offset-xs2 text-small">
+          <h4 class="padding-top-m padding-bottom-m">Inside</h4>
+          <div class="border border-grey border-lighten-2 pos-r" style="height:300px;">
+            <div class="abs-middle-top-inside purple lighten-1 dib padding-s">.abs-middle-<br>top-inside</div>
+            <div class="abs-middle-bottom-inside purple lighten-1 dib padding-s">.abs-middle-<br>bottom-inside</div>
+            <div class="abs-left-top-inside purple lighten-1 dib padding-s">.abs-left-<br>top-inside</div>
+            <div class="abs-left-middle-inside purple lighten-1 dib padding-s">.abs-left-<br>middle-inside</div>
+            <div class="abs-left-bottom-inside purple lighten-1 dib padding-s">.abs-left-<br>bottom-inside</div>
+            <div class="abs-right-top-inside purple lighten-1 dib padding-s">.abs-right-<br>top-inside</div>
+            <div class="abs-right-middle-inside purple lighten-1 dib padding-s">.abs-right-<br>middle-inside</div>
+            <div class="abs-right-bottom-inside purple lighten-1 dib padding-s">.abs-right-<br>bottom-inside</div>
+          </div>
+        </div><!-- .col -->
+      </div><!-- .row -->
+      
+
+      <div class="row margin-bottom-xl">
+        <div class="col xs6 offset-xs3 text-small">
+          <h4 class="padding-top-m padding-bottom-xl">Outside</h4>
+          <div class="border border-grey border-lighten-2 pos-r" style="height:200px;">
+            <div class="abs-middle-top-outside purple lighten-1 dib padding-s">.abs&#8209;middle-<br>top&#8209;outside</div>
+            <div class="abs-middle-bottom-outside purple lighten-1 dib padding-s">.abs&#8209;middle-<br>bottom&#8209;outside</div>
+            <div class="abs-left-top-outside purple lighten-1 dib padding-s">.abs&#8209;left-<br>top&#8209;outside</div>
+            <div class="abs-left-middle-outside purple lighten-1 dib padding-s">.abs&#8209;left-<br>middle&#8209;outside</div>
+            <div class="abs-left-bottom-outside purple lighten-1 dib padding-s">.abs&#8209;left-<br>bottom&#8209;outside</div>
+            <div class="abs-right-top-outside purple lighten-1 dib padding-s">.abs&#8209;right-<br>top&#8209;outside</div>
+            <div class="abs-right-middle-outside purple lighten-1 dib padding-s">.abs&#8209;right-<br>middle&#8209;outside</div>
+            <div class="abs-right-bottom-outside purple lighten-1 dib padding-s">.abs&#8209;right-<br>bottom&#8209;outside</div>
+          </div>
+        </div><!-- .col -->
+      </div><!-- .row -->
+
+      <!--  Display Section-->
+      <div id="vertical-align" class="section scrollspy padding-top-xl">
+        <h2 class="header">Vertical Alignment</h2>
+        <p>These classes apply to inline block elements to alter their vertical alignment.</p>
+        <table class="striped">
+          <tr>
+            <th>Inside</th>
+            <th>Outside</th>
+          </tr>
+          <tr>
+            <td><code>.vertical-align</code></td>
+            <td>vertical-align: middle</td>
+          </tr>
+          <tr>
+            <td><code>.vertical-align-top</code></td>
+            <td>vertical-align: top</td>
+          </tr>
+          <tr>
+            <td><code>.vertical-align-bottom</code></td>
+            <td>vertical-align: bottom</td>
+          </tr>
+        </table>
+      </div>
+
+    </div><!-- .col -->
+
+    <div class="col hide-on-small-and-down m3 l2">
+      <div class="toc-wrapper">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#valign">Alignment</a></li>
+            <li><a href="#truncation">Truncation</a></li>
+            <li><a href="#margin-padding">Margin &amp; Padding</a></li>
+            <li><a href="#show-hide">Show &amp; Hide</a></li>
+            <li><a href="#display">Display</a></li>
+            <li><a href="#width">Width</a></li>
+            <li><a href="#position">Position</a></li>
+            <li><a href="#absolute-position">Absolute Positioning</a></li>
+            <li><a href="#vertical-align">Vertical Alignment</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+    </main>
+        <% include ../partials/footerScripts.html %>
+        <% include ../partials/footerScripts-styleguide.html %>
+  </body>
+</html>

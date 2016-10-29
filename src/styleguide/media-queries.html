@@ -1,0 +1,415 @@
+<html lang="en">
+  <head>
+    <!-- include common head -->
+    <% include ../partials/head.html %>
+    <!-- include styleguide head -->
+    <% include ./partials/head.html %>
+    <!-- page-specific head -->
+    <meta name="description" content="Meta description">
+  </head>
+  <body class="styleguide">
+    <header>
+    <% include ./partials/left-rail.html %>
+    </header>
+    <main><div class="container">
+  <div class="row">
+
+    <div class="col xs12 m9 l10">
+
+      <div id="screen-sizes" class="section scrollspy">
+        <h2 class="header">Screen Sizes</h2>
+        <p class="caption">
+        We have 5 media queries you can use in your code. This also includes media query variables that will define the range.
+        </p>
+        <table class="hoverable">
+          <thead>
+            <tr>
+              <th></th>
+              <th data-field="id">Mobile Devices</th>
+              <th data-field="id">Portrait<br>Tablet Devices</th>
+              <th data-field="name">Landscape<br>Tablet Devices</th>
+              <th data-field="price">Laptop Devices</th>
+              <th data-field="price">Desktop Devices</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Screen sizes</strong></td>
+              <td>0-600px</td>
+              <td>601-992px</td>
+              <td>993-1200px</td>
+              <td>1201-1600px</td>
+              <td>1600px +</td>
+            </tr>
+            <tr>
+              <td><strong>Class Prefix</strong></td>
+              <td><code class=" language-markup">.xs</code></td>
+              <td><code class=" language-markup">.s</code></td>
+              <td><code class=" language-markup">.m</code></td>
+              <td><code class=" language-markup">.l</code></td>
+              <td><code class=" language-markup">.xl</code></td>
+            </tr>
+            <tr>
+              <td><strong>Container Width</strong></td>
+              <td>85%</td>
+              <td>85%</td>
+              <td>85%</td>
+              <td>80%</td>
+              <td>80%</td>
+            </tr>
+            <tr>
+              <td><strong>Number of Columns</strong></td>
+              <td>12</td>
+              <td>12</td>
+              <td>12</td>
+              <td>12</td>
+              <td>12</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="sass" class="section scrollspy">
+        <h2 class="header">Sass</h2>
+        <h4>Variables</h4>
+        <div class="row">
+          <div class="col xs12 m9 l6">
+            <table class="hoverable">
+              <tr class="grey lighten-2">
+                <td><strong>Mobile Devices</strong></td>
+                <td><code>$xsmall-screen-max</code></td>
+                <td>600px</td>
+              </tr>
+              <tr>
+                <td><strong>Portrait Tablets</strong></td>
+                <td><code>$small-screen-min</code></td>
+                <td>601px</td>
+              </tr>
+              <tr>
+                <td><strong>&nbsp;</strong></td>
+                <td><code>$small-screen-max</code></td>
+                <td>992px</td>
+              </tr>
+              <tr class="grey lighten-2">
+                <td><strong>Landscape Tablets</strong></td>
+                <td><code>$medium-screen-min</code></td>
+                <td>993px</td>
+              </tr>
+              <tr class="grey lighten-2">
+                <td><strong>&nbsp;</strong></td>
+                <td><code>$medium-screen-max</code></td>
+                <td>1200px</td>
+              </tr>
+              <tr>
+                <td><strong>Laptops</strong></td>
+                <td><code>$large-screen-min</code></td>
+                <td>1201px</td>
+              </tr>
+              <tr>
+                <td><strong>&nbsp;</strong></td>
+                <td><code>$large-screen-max</code></td>
+                <td>1600px</td>
+              </tr>
+              <tr class="grey lighten-2">
+                <td><strong>Desktops</strong></td>
+                <td><code>$xlarge-screen-min</code></td>
+                <td>1601px</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <br>
+
+        <h4>Media Queries</h4>
+                  <pre class="language-markup"><code class="language-scss col xs12">
+  @media #{$medium-and-up} {
+    // styles for medium screens and larger
+  }
+  @media #{$medium-and-down} {
+    // styles for medium screens and down
+  }
+  @media #{$medium-only} {
+    // styles for medium screens only
+  }
+            </code></pre>
+        <!-- <pre class="language-markup"><code class="language-markup">@media #{$small-and-up} {<br><span class="tab tab-1"></span>//code<br>}</code></pre> -->
+        <table class="hoverable">
+          <thead>
+            <tr>
+              <th data-field="id">Mobile Devices</th>
+              <th data-field="id">Portrait Tablet Devices</th>
+              <th data-field="name">Landscape Tablet Devices</th>
+              <th data-field="price">Laptop Devices</th>
+              <th data-field="price">Desktop Devices</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>$xsmall-and-up<sup>1</sup><br>$xsmall-and-down<sup>2</sup><br>$xsmall-only</code></td>
+              <td><code>$small-and-up<br>$small-and-down<br>$small-only</code></td>
+              <td><code>$medium-and-up<br>$medium-and-down<br>$medium-only</code></td>
+              <td><code>$large-and-up<br>$large-and-down<br>$large-only</code></td>
+              <td><code>$xlarge-and-up<sup>3</sup><br>$xlarge-and-down<sup>4</sup><br>$xlarge-only</code></td>
+            </tr>
+          </tbody>
+        </table>
+        <small>
+          1. Equivalent to all screen sizes <br>
+          2. Equivalent to $xsmall-only <br>
+          2. Equivalent to $xlarge-only <br>
+          4. Equivalent to all screen sizes <br>
+
+        </small>
+
+      </div>
+
+      <!--  Hiding Section-->
+      <div id="hiding" class="section scrollspy">
+        <h2 class="header">Hiding Content</h2>
+        <p class="caption">We provide easy to use classes to hide content on specific screen sizes. These classes can be added to HTML Elements to affect visibility on certain displays.</p>
+
+        <table class="striped">
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Screen Range</th>
+            </tr>
+          </thead>
+            <tbody>
+            <tr>
+              <td><code class="language-markup"><strong>.hide</strong></code></td>
+              <td>Hidden for all Devices</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.hide-on-xsmall</strong></code></td>
+              <td>Hidden for Mobile Only</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.hide-on-xsmall-and-down</strong></code></td>
+              <td>Hidden for Mobile Only</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.hide-on-small-and-down</strong></code></td>
+              <td>Hidden for Portrait Tablet and Below</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.hide-on-small-and-up</strong></code></td>
+              <td>Hidden for Portrait Tablet and Above</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.hide-on-small</strong></code></td>
+              <td>Hidden for Portrait Tablet only</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.hide-on-medium-and-down</strong></code></td>
+             <td>Hidden for Landscape Tablet and Below</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.hide-on-medium-and-up</strong></code></td>
+             <td>Hidden for Landscape Tablet and Above</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.hide-on-medium</strong></code></td>
+             <td>Hidden for Landscape Tablet only</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.hide-on-large-and-down</strong></code></td>
+              <td>Hidden for Laptop and Below</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.hide-on-large-and-up</strong></code></td>
+              <td>Hidden for Laptop and Above</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.hide-on-large</strong></code></td>
+              <td>Hidden for Laptop only</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.hide-on-xlarge-and-up</strong></code></td>
+              <td>Hidden for Desktop and Above</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.hide-on-xlarge</strong></code></td>
+              <td>Hidden for Desktop Only</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+
+        <br>
+        <h5 class="light">Usage</h5>
+        <pre class="language-markup"><code class="language-markup">
+  &lt;div class="hide-on-small-and-down">&lt;/div>
+        </code></pre><br>
+
+      </div><!--  End Hiding Section  -->
+
+      <!--  Showing Section-->
+      <div id="showing" class="section scrollspy">
+        <h2 class="header">Showing Content</h2>
+        <p>We provide easy to use classes to show content on specific screen sizes. </p>
+
+        <table class="striped">
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Screen Range</th>
+            </tr>
+          </thead>
+            <tbody>
+            <tr>
+              <td><code class="language-markup"><strong>.show</strong></code></td>
+              <td>Visible for all Devices</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.show-on-xsmall</strong></code></td>
+              <td>Visible for Mobile Only</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.show-on-xsmall-and-down</strong></code></td>
+              <td>Visible for Mobile Only</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.show-on-small-and-down</strong></code></td>
+              <td>Visible for Portrait Tablet and Below</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.show-on-small-and-up</strong></code></td>
+              <td>Visible for Portrait Tablet and Above</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.show-on-small</strong></code></td>
+              <td>Visible for Portrait Tablet only</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.show-on-medium-and-down</strong></code></td>
+             <td>Visible for Landscape Tablet and Below</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.show-on-medium-and-up</strong></code></td>
+             <td>Visible for Landscape Tablet and Above</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.show-on-medium</strong></code></td>
+             <td>Visible for Landscape Tablet only</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.show-on-large-and-down</strong></code></td>
+              <td>Visible for Laptop and Below</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.show-on-large-and-up</strong></code></td>
+              <td>Visible for Laptop and Above</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.show-on-large</strong></code></td>
+              <td>Visible for Laptop only</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.show-on-xlarge-and-up</strong></code></td>
+              <td>Visible for Desktop and Above</td>
+            </tr>
+            <tr>
+              <td><code class="language-markup"><strong>.show-on-xlarge</strong></code></td>
+              <td>Visible for Desktop Only</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br>
+        <h5 class="light">Usage</h5>
+        <div class="grey hide show-on-small">.show-on-small</div>
+        <pre class="language-markup"><code class="language-markup">
+  &lt;div class="show-on-small">&lt;/div>
+        </code></pre><br>
+
+        <h5>Examples</h5>
+        <h5 class="text-purple">Currently <span class="js-screen-width"></span> <span class="js-screen-width-name  text-purple text-lighten-2"></span> </h5>
+<div class="row">
+  <div class="col xs4 m4 margin-bottom-s show hide-on-xsmall-and-down"><div class="purple text-white padding-s">.hide-on-xsmall-and-down</div></div>
+  <div class="col xs4 m4 margin-bottom-s hide show-on-xsmall-and-down"><div class="border-purple border-lighten-2 text-purple text-lighten-2 padding-s">.show-on-xsmall-and-down</div></div>
+  <div class="col xs4 m4 margin-bottom-s show hide-on-xsmall"><div class="purple text-white padding-s">.hide-on-xsmall</div></div>
+  <div class="col xs4 m4 margin-bottom-s hide show-on-xsmall"><div class="border-purple border-lighten-2 text-purple text-lighten-2 padding-s">.show-on-xsmall</div></div>
+  <div class="col xs4 m4 margin-bottom-s"><div class="border-purple border-lighten-2 text-purple text-lighten-2 padding-s">.show</div></div>
+</div>
+<div class="row">
+  <div class="col xs4 m4 margin-bottom-s show hide-on-small-and-down"><div class="purple text-white padding-s">.hide-on-small-and-down</div></div>
+  <div class="col xs4 m4 margin-bottom-s hide show-on-small-and-down"><div class="border-purple border-lighten-2 text-purple text-lighten-2 padding-s">.show-on-small-and-down</div></div>
+  <div class="col xs4 m4 margin-bottom-s show hide-on-small"><div class="purple text-white padding-s">.hide-on-small</div></div>
+  <div class="col xs4 m4 margin-bottom-s hide show-on-small"><div class="border-purple border-lighten-2 text-purple text-lighten-2 padding-s">.show-on-small</div></div>
+  <div class="col xs4 m4 margin-bottom-s show hide-on-small-and-up"><div class="purple text-white padding-s">.hide-on-small-and-up</div></div>
+  <div class="col xs4 m4 margin-bottom-s hide show-on-small-and-up"><div class="border-purple border-lighten-2 text-purple text-lighten-2 padding-s">.show-on-small-and-up</div></div>
+</div>
+<div class="row">
+  <div class="col xs4 m4 margin-bottom-s show hide-on-medium-and-down"><div class="purple text-white padding-s">.hide-on-medium-and-down</div></div>
+  <div class="col xs4 m4 margin-bottom-s hide show-on-medium-and-down"><div class="border-purple border-lighten-2 text-purple text-lighten-2 padding-s">.show-on-medium-and-down</div></div>
+  <div class="col xs4 m4 margin-bottom-s show hide-on-medium"><div class="purple text-white padding-s">.hide-on-medium</div></div>
+  <div class="col xs4 m4 margin-bottom-s hide show-on-medium"><div class="border-purple border-lighten-2 text-purple text-lighten-2 padding-s">.show-on-medium</div></div>
+  <div class="col xs4 m4 margin-bottom-s show hide-on-medium-and-up"><div class="purple text-white padding-s">.hide-on-medium-and-up</div></div>
+  <div class="col xs4 m4 margin-bottom-s hide show-on-medium-and-up"><div class="border-purple border-lighten-2 text-purple text-lighten-2 padding-s">.show-on-medium-and-up</div></div>
+</div>
+<div class="row">
+  <div class="col xs4 m4 margin-bottom-s show hide-on-large-and-down"><div class="purple text-white padding-s">.hide-on-large-and-down</div></div>
+  <div class="col xs4 m4 margin-bottom-s hide show-on-large-and-down"><div class="border-purple border-lighten-2 text-purple text-lighten-2 padding-s">.show-on-large-and-down</div></div>
+  <div class="col xs4 m4 margin-bottom-s show hide-on-large"><div class="purple text-white padding-s">.hide-on-large</div></div>
+  <div class="col xs4 m4 margin-bottom-s hide show-on-large"><div class="border-purple border-lighten-2 text-purple text-lighten-2 padding-s">.show-on-large</div></div>
+  <div class="col xs4 m4 margin-bottom-s show hide-on-large-and-up"><div class="purple text-white padding-s">.hide-on-large-and-up</div></div>
+  <div class="col xs4 m4 margin-bottom-s hide show-on-large-and-up"><div class="border-purple border-lighten-2 text-purple text-lighten-2 padding-s">.show-on-large-and-up</div></div>
+</div>
+<div class="row">
+  <div class="col xs4 m4 margin-bottom-s"><div class="purple text-white padding-s">.hide</div></div>
+  <div class="col xs4 m4 margin-bottom-s show hide-on-xlarge"><div class="purple text-white padding-s">.hide-on-xlarge</div></div>
+  <div class="col xs4 m4 margin-bottom-s hide show-on-xlarge"><div class="border-purple border-lighten-2 text-purple text-lighten-2 padding-s">.show-on-xlarge</div></div>
+  <div class="col xs4 m4 margin-bottom-s show hide-on-xlarge-and-up"><div class="purple text-white padding-s">.hide-on-xlarge-and-up</div></div>
+  <div class="col xs4 m4 margin-bottom-s hide show-on-xlarge-and-up"><div class="border-purple border-lighten-2 text-purple text-lighten-2 padding-s">.show-on-xlarge-and-up</div></div>
+</div>
+
+      </div><!--  End Showing Section  -->
+
+    </div>
+    <div class="col hide-on-small-and-down m3 l2">
+      <div class="toc-wrapper">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#screen-sizes">Screen Sizes</a></li>
+            <li><a href="#sass">Sass</a></li>
+            <li><a href="#hiding">Hiding Content</a></li>
+            <li><a href="#showing">Showing Content</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- end row -->
+
+</div>
+
+    </main>
+    <% include ../partials/footerScripts.html %>
+    <% include ../partials/footerScripts-styleguide.html %>
+    <script>
+    var getScreenSize = (function(){
+      var my = {};
+      my.init = function(){
+        doGet();
+        $( window ).resize(function() {
+         console.log('resizing');
+         doGet();
+        });
+      };
+      doGet = function(){
+        var windowWidth = $(window).width();
+        $('.js-screen-width').text(windowWidth + 'px');
+        var widthName;
+        if (windowWidth < 600) { widthName = 'Extra Small';} else if ((windowWidth > 600) && (windowWidth <= 992)) { widthName = "Small";} else if ((windowWidth > 992) && (windowWidth <= 1200)) { widthName = "Medium";} else if ((windowWidth > 1200) && (windowWidth <= 1600)) { widthName = "Large";} else if ((windowWidth > 1600)) { widthName = "Extra Large";}
+        $('.js-screen-width-name').text(widthName);
+      };
+      return my;
+    }());//getScreenSize
+    jQueryLoadListener.Deferred.execute(function(){
+      getScreenSize.init();
+    });
+
+    </script>
+  </body>
+</html>

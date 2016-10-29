@@ -1,0 +1,265 @@
+<html lang="en">
+  <head>
+    <!-- include common head -->
+    <% include ../partials/head.html %>
+    <!-- include styleguide head -->
+    <% include ./partials/head.html %>
+    <!-- page-specific head -->
+    <meta name="description" content="Meta description">
+  </head>
+  <body class="styleguide">
+    <header>
+    <% include ./partials/left-rail.html %>
+    </header>
+    <main><div class="container">
+  <div class="row">
+
+    <div class="col xs12 m9 l10">
+
+      <div class="section">
+
+        <div id="headers" class="section scrollspy">
+          <h1 class="header">Typography</h1>
+          <p>We provide some basic styling on header tags. In the example, you can see the the 6 header tags' different sizes.</p>
+          <h2 class="header">Page title</h2>
+          <p class="caption">Include no more than one &lt;h1&gt; per page.</p>
+          <div class="card-panel">
+            <h1>Heading h1 or .h1</h1>
+            <p class="h-subhead">*.h-subhead</p>
+          </div>
+        </div>
+
+        <div id="" class="section">
+          <h2 class="header">Subheadings</h2>
+          <p class="caption">Include no more than one &lt;h2&gt; per page. Use .h* classes to simulate heading styles on any element. Use in conjunction with <a href="#helpers">text helpers</a> for even more customability.</p>
+          <div class="card-panel">
+            <h2>Heading h2 or .h2</h2>
+            <h3>Heading h3 or .h3</h3>
+            <h4>Heading h4 or .h4</h4>
+            <h5>Heading h5 or .h5</h5>
+            <h6>Heading h6 or .h6</h6>
+          </div>
+        </div>
+
+        <div id="" class="section">
+          <h2 class="header">Sized headings</h2>
+          <p class="caption">These headings throw back to pixel sizes of yore but convert them into rems that will scale appropriately based on device size. Use in conjunction with <a href="#helpers">text helpers</a> for even more customability.</p>
+          <div class="card-panel">
+            <div class="h-48">Heading .h-48</div>
+            <div class="h-42">Heading .h-42</div>
+            <div class="h-38">Heading .h-38</div>
+            <div class="h-32">Heading .h-32</div>
+            <div class="h-28">Heading .h-28</div>
+            <div class="h-24">Heading .h-24</div>
+            <div class="h-22">Heading .h-22</div>
+            <div class="h-18">Heading .h-18</div>
+            <div class="h-14">Heading .h-14</div>
+            <div class="h-12">Heading .h-12</div>
+            <div class="h-10">Heading .h-10</div>
+          </div>
+        </div>
+
+
+
+        <div id="basic-text" class="section scrollspy">
+          <h2 class="header">Basic text</h2>
+          <div class="card-panel">
+            <p>
+              This is paragraph text. Donec id elit non mi porta gravida at eget metus.  Pellentesque ornare sem lacinia quam venenatis vestibulum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. <a href="#">This is a link.</a> Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            </p>
+          </div>
+        </div>
+
+        <div id="helpers" class="section scrollspy">
+          <h2 class="header">Helpers</h2>
+          <div class="card-panel">
+              <div><small>.text-small or &lt;small></small></div>
+              <div><em>.text-em or &lt;em></em></div>
+              <div class="text-italic">.text-italic</div>
+              <div><strong>.text-strong or &lt;strong></strong></div>
+              <div class="text-thin">.text-thin or $thin at weight 100</div>
+              <div class="text-light">.text-light or $light at weight 300</div>
+              <div class="text-regular">.text-regular or $regular at weight 400</div>
+              <div class="text-semibold">.text-semibold or $semibold at weight 600</div>
+              <div class="text-bold">.text-bold or $bold at weight 700</div>
+          </div>
+        </div>
+
+        <div id="line-height" class="section scrollspy">
+          <h2 class="header">Line Height</h2>
+          <div class="row">
+            <div class="col xs6 m2">
+              <div class="margin-bottom-s text-bold">.line-height-0</div><div class="line-height-0"><br>Donec id elit non mi porta gravida at eget metus.</div>
+          </div>
+            <div class="col xs6 m2">
+              <div class="margin-bottom-s text-bold">.line-height-s</div><div class="line-height-s">Donec id elit non mi porta gravida at eget metus.</div>
+          </div>
+            <div class="col xs6 m2">
+              <div class="margin-bottom-s text-bold">.line-height-m</div><div class="line-height-m">Donec id elit non mi porta gravida at eget metus.</div>
+          </div>
+            <div class="col xs6 m2">
+              <div class="margin-bottom-s text-bold">.line-height-l</div><div class="line-height-l">Donec id elit non mi porta gravida at eget metus.</div>
+          </div>
+            <div class="col xs6 m2">
+              <div class="margin-bottom-s text-bold">.line-height-xl</div><div class="line-height-xl">Donec id elit non mi porta gravida at eget metus.</div>
+          </div>
+          </div>
+        </div>
+
+
+
+        <div id="alignment">
+          <h2 class="header">Alignment</h2>
+            <p>These classes are for horizontally aligning content. We have <code class="language-markup">.text-left</code>, <code class="language-markup">.text-right</code> and <code class="language-markup">.text-center</code></p>
+            <div class="talign-demo">
+              <br>
+              <h5 class="text-left">This should be left aligned</h5>
+            </div>
+            <br>
+            <div class="talign-demo">
+              <br>
+              <h5 class="text-right">This should be right aligned</h5>
+            </div>
+            <br>
+            <div class="talign-demo">
+              <br>
+              <h5 class="text-center">This should be center aligned</h5>
+            </div>
+            <pre class="language-markup"><code class="language-markup">
+      &lt;div>
+        &lt;h5 class="text-left">This should be left aligned&lt;/h5>
+      &lt;/div>
+      &lt;div>
+        &lt;h5 class="text-right">This should be right aligned&lt;/h5>
+      &lt;/div>
+      &lt;div>
+        &lt;h5 class="text-center">This should be center aligned&lt;/h5>
+      &lt;/div>
+            </code></pre><br>
+        </div>
+
+        <div id="alignment">
+          <h4 class="header">Responsive Alignment</h4>
+            <p>These classes set text alignment for different viewport sizes. We have <code class="language-markup">.stext-left</code>, <code class="language-markup">.stext-right</code> and <code class="language-markup">.stext-center</code> where <code class="language-markup">s</code> can be swapped out for <code class="language-markup">m, l,</code> or <code class="language-markup">xl</code>.</p>
+            <div class="row">
+              <div class="col m3">
+                <strong>Small screens and up</strong>
+                <code>
+                  <ul>
+                    <li>.stext-left</li>
+                    <li>.stext-right</li>
+                    <li>.stext-center</li>
+                  </ul>
+                </code>
+              </div>
+              <div class="col m3">
+                <strong>Medium screens and up</strong>
+                <code>
+                  <ul>
+                    <li>.mtext-left</li>
+                    <li>.mtext-right</li>
+                    <li>.mtext-center</li>
+                  </ul>
+                </code>
+              </div>
+              <div class="col m3">
+                <strong>Large screens and up</strong>
+                <code>
+                  <ul>
+                    <li>.ltext-left</li>
+                    <li>.ltext-right</li>
+                    <li>.ltext-center</li>
+                  </ul>
+                </code>
+              </div>
+              <div class="col m3">
+                <strong>Extra large screens and up</strong>
+                <code>
+                  <ul>
+                    <li>.xltext-left</li>
+                    <li>.xltext-right</li>
+                    <li>.xltext-center</li>
+                  </ul>
+                </code>
+              </div>
+
+            </div>
+            <div class="talign-demo">
+              <br>
+              <p class="text-center xltext-left">This should be left aligned on extra large screens and up</p>
+            </div>
+            <div class="talign-demo">
+              <br>
+              <p class="text-center ltext-left">This should be left aligned on large screens and up</p>
+            </div>
+
+            <div class="talign-demo">
+              <br>
+              <p class="text-center mtext-left">This should be left aligned on medium screens and up</p>
+            </div>
+            <div class="talign-demo">
+              <br>
+              <p class="text-center stext-left">This should be left aligned on small screens and up</p>
+            </div>
+            <pre class="language-markup"><code class="language-markup">
+      &lt;div>
+        &lt;p class="text-center ltext-left">This should be left aligned on large screens and up&lt;/p>
+      &lt;/div>
+      &lt;div>
+        &lt;p class="text-center xltext-left">This should be left aligned on extra large screens and up&lt;/p>
+      &lt;/div>
+
+      &lt;div>
+        &lt;p class="text-center mtext-left">This should be left aligned on medium screens and up&lt;/p>
+      &lt;/div>
+      &lt;div>
+        &lt;p class="text-center stext-left">This should be left aligned on small screens and up&lt;/p>
+      &lt;/div>
+            </code></pre><br>
+        </div>
+
+        <div id="flow" class="section scrollspy">
+          <h2 class="header">Flow Text</h2>
+          <a id="flow-toggle" class="btn waves-effect waves-light">Toggle flow-text</a>
+          <div id="flow-text-demo" class="card-panel">
+          <p class="flow-text">
+          One common flaw we've seen in many frameworks is a lack of support for truly responsive text. While elements on the page resize fluidly, text still resizes on a fixed basis. To ameliorate this problem, for text heavy pages, we've created a class that fluidly scales text size and line-height to optimize readability for the user. Line length stays between 45-80 characters and line height scales to be larger on smaller screens.</p>
+          <p class="flow-text">To see Flow Text in action, slowly resize your browser and watch the size of this text body change! Use the button above to toggle off/on flow-text to see the difference!</p>
+          </div>
+
+          <br>
+
+          <p>To use flow-text on a body of text, simply just add the class <code class=" language-markup">flow-text</code> to a tag, see the code blow.</p>
+          <div class="row">
+          <pre class=" language-markup"><code class=" col xs12 language-markup">
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>flow-text<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>I am Flow Text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+          </code></pre>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="col hide-on-small-and-down m3 l2">
+      <div class="toc-wrapper pinned" style="top: 0px;">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#headers">Headers</a></li>
+            <li><a href="#basic-text">Basic Text</a></li>
+            <li><a href="#helpers">Helpers</a></li>
+            <li><a href="#line-height">Line Height</a></li>
+            <li><a href="#alignment">Alignment</a></li>
+            <li><a href="#headers">Headers</a></li>
+            <li><a href="#blockquote">Blockquotes</a></li>
+            <li><a href="#flow">Flow Text</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> <!-- End Container -->
+    </main>
+        <% include ../partials/footerScripts.html %>
+        <% include ../partials/footerScripts-styleguide.html %>
+  </body>
+</html>

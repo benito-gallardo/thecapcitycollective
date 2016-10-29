@@ -1,0 +1,139 @@
+<html lang="en">
+  <head>
+    <!-- include common head -->
+    <% include ../partials/head.html %>
+    <!-- include styleguide head -->
+    <% include ./partials/head.html %>
+    <!-- page-specific head -->
+    <meta name="description" content="Meta description">
+  </head>
+  <body class="styleguide">
+    <header>
+    <% include ./partials/left-rail.html %>
+    </header>
+    <main><div class="container">
+  <div class="row">
+
+    <div class="col xs12 m9 l10">
+
+      <div id="introduction" class="section scrollspy">
+        <h4>Introduction</h4>
+        <p class="caption">The tabs structure consists of an unordered list of tabs that have hashes corresponding to tab ids. Then when you click on each tab, only the container with the corresponding tab id will become visible. You can add the class <code class=" language-markup">.disabled</code> to make a tab inaccessible. </p>
+
+        <ul class="tabs tab-demo z-depth-1" style="width: 100%;">
+          <li class="tab col xs3"><a href="#test1">Test 1</a></li>
+          <li class="tab col xs3"><a class="active" href="#test2">Test 2</a></li>
+          <li class="tab col xs3 disabled"><a href="#test3">Disabled Tab</a></li>
+          <li class="tab col xs3"><a href="#test4">Test 4</a></li>
+          <li class="tab col xs3"><a href="#test0">Test 5</a></li>
+        <div class="indicator" style="right: 358px; left: 119px;"></div></ul>
+        <div id="test1" class="col xs12" style="display: none;"><p>Test 1</p></div>
+        <div id="test2" class="col xs12"><p>Test 2</p></div>
+        <div id="test3" class="col xs12" style="display: none;"><p>Test 3</p></div>
+        <div id="test4" class="col xs12" style="display: none;"><p>Test 4</p></div>
+
+        <br>
+        <h5>Scrollable tabs</h5>
+        <ul class="tabs tab-demo z-depth-1" style="width: 100%;">
+          <li class="tab col xs3"><a href="#test5">Test 1</a></li>
+          <li class="tab col xs3"><a class="active" href="#test6">Test 2</a></li>
+          <li class="tab col xs3"><a href="#test7">Test 4</a></li>
+          <li class="tab col xs3"><a href="#test8">Test 1</a></li>
+          <li class="tab col xs3"><a class="active" href="#test9">Test 2</a></li>
+          <li class="tab col xs3 disabled"><a href="#test10">Disabled Tab</a></li>
+          <li class="tab col xs3"><a href="#test11">Test 4</a></li>
+          <li class="tab col xs3"><a href="#test12">Test 1</a></li>
+          <li class="tab col xs3"><a class="active" href="#test13">Test 2</a></li>
+          <li class="tab col xs3 disabled"><a href="#test14">Disabled Tab</a></li>
+          <li class="tab col xs3"><a href="#test15">Test 4</a></li>
+        <div class="indicator" style="right: 436px; left: 80px;"></div></ul>
+        <div id="test5" class="col xs12" style="display: none;"><p>Test 5</p></div>
+        <div id="test6" class="col xs12"><p>Test 6</p></div>
+        <div id="test7" class="col xs12" style="display: none;"><p>Test 7</p></div>
+        <div id="test8" class="col xs12" style="display: none;"><p>Test 8</p></div>
+        <div id="test9" class="col xs12" style="display: none;"><p>Test 9</p></div>
+        <div id="test10" class="col xs12" style="display: none;"><p>Test 10</p></div>
+        <div id="test11" class="col xs12" style="display: none;"><p>Test 11</p></div>
+        <div id="test12" class="col xs12" style="display: none;"><p>Test 12</p></div>
+        <div id="test13" class="col xs12" style="display: none;"><p>Test 13</p></div>
+        <div id="test14" class="col xs12" style="display: none;"><p>Test 14</p></div>
+        <div id="test15" class="col xs12" style="display: none;"><p>Test 15</p></div>
+      </div>
+
+
+      <div id="structure" class="section scrollspy">
+        <h4>Tabs HTML Structure</h4>
+        <pre class=" language-markup"><code class=" language-markup">
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>row<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs12<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tabs<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tab col xs3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#test1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Test 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tab col xs3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>active<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#test2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Test 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tab col xs3 disabled<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#test3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Disabled Tab<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tab col xs3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#test4<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Test 4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>test1<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs12<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Test 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>test2<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs12<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Test 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>test3<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs12<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Test 3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>test4<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs12<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Test 4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+        </code></pre>
+      </div>
+
+      <div id="initialization" class="section scrollspy">
+        <h4>jQuery Plugin Initialization</h4>
+        <p>Tabs are initialized automatically, but if you add tabs dynamically you will have to initialize them like this.</p>
+        <pre class=" language-javascript"><code class=" language-javascript">
+  <span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'ul.tabs'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">tabs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        </code></pre>
+      </div>
+
+      <div id="method" class="section scrollspy">
+        <h4>jQuery Plugin Methods</h4>
+        <p>You can programmatically trigger a tab change with our <code class=" language-javascript">select_tab</code> method. You have to input the id of the tab you want to switch to. In the case of our demo it would be either test1, test2, test3, or test4.</p>
+        <pre class=" language-javascript"><code class=" language-javascript">
+  <span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'ul.tabs'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">tabs</span><span class="token punctuation">(</span><span class="token string">'select_tab'</span><span class="token punctuation">,</span> <span class="token string">'tab_id'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        </code></pre>
+      </div>
+
+
+
+      <div id="preselecting" class="section scrollspy">
+        <h4>Preselecting a tab</h4>
+          <p>By default, the first tab is selected. But if this is not what you want, you can preselect a tab by either passing in the hash in the url ex:<code class=" language-markup">#test2</code>. Or you can add the class <code class=" language-markup">active</code> to the <code class=" language-markup">a</code> tag.</p>
+        <pre class=" language-markup"><code class=" col xs12 language-markup">
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tab col xs2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>active<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#test3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Test 3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+        </code></pre>
+      </div>
+
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="col hide-on-small-and-down m3 l2">
+      <div class="toc-wrapper pin-top" style="top: 0px;">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#introduction" class="active">Introduction</a></li>
+            <li><a href="#structure">Structure</a></li>
+            <li><a href="#initialization">Intialization</a></li>
+            <li><a href="#method">Methods</a></li>
+            <li><a href="#preselecting">Preselecting</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    </main>
+    <% include ../partials/footerScripts.html %>
+    <% include ../partials/footerScripts-styleguide.html %>
+  </body>
+</html>

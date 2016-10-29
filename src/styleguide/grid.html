@@ -1,0 +1,321 @@
+<html lang="en">
+
+<head>
+  <!-- include common head -->
+  <% include ../partials/head.html %>
+  <!-- page-specific head -->
+  <title>Site title</title>
+  <meta name="description" content="Meta description">
+</head>
+
+<body class="styleguide">
+  <header>
+    <% include ./partials/left-rail.html %>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+
+        <div class="col xs12 m9 l10">
+
+          <div>
+            <!-- Grid visual demo -->
+            <div id="grid-intro" class="scrollspy">
+              <h2 class="header">Introduction</h2>
+              <p>Take a look at this section to quickly understand how the grid works!</p>
+              <h4>12 Columns</h4>
+              <p>Our standard grid has 12 columns. No matter the size of the browser, each of these columns will always have an equal width.</p>
+              <div class="row">
+                <div class="col xs1 grid-example"><span class="flow-text">1</span>
+                </div>
+                <div class="col xs1 grid-example"><span class="flow-text">2</span>
+                </div>
+                <div class="col xs1 grid-example"><span class="flow-text">3</span>
+                </div>
+                <div class="col xs1 grid-example"><span class="flow-text">4</span>
+                </div>
+                <div class="col xs1 grid-example"><span class="flow-text">5</span>
+                </div>
+                <div class="col xs1 grid-example"><span class="flow-text">6</span>
+                </div>
+                <div class="col xs1 grid-example"><span class="flow-text">7</span>
+                </div>
+                <div class="col xs1 grid-example"><span class="flow-text">8</span>
+                </div>
+                <div class="col xs1 grid-example"><span class="flow-text">9</span>
+                </div>
+                <div class="col xs1 grid-example"><span class="flow-text">10</span>
+                </div>
+                <div class="col xs1 grid-example"><span class="flow-text">11</span>
+                </div>
+                <div class="col xs1 grid-example"><span class="flow-text">12</span>
+                </div>
+              </div>
+              <p>To get a feel of how the grid is used in HTML, take a look at the code below which will produce a similar result to the one above.</p>
+              <pre class=" language-markup"><code class=" language-markup">
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>row<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>5<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>6<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>7<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>8<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>9<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>10<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>11<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>12<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+          </code></pre>
+              <p>Note: For now, just know that the <code class=" language-markup">s1</code> stands for small-1 which in plain English means "1 column on small screens".</p>
+
+              <br>
+
+              <h4>Columns live inside Rows</h4>
+              <p>Remember when you are creating your layout that all columns must be contained inside a row and that you must add the <code class=" language-markup">col</code> class to your inner divs to make them into columns</p>
+              <div class="row">
+                <div class="col xs12 grid-example"><span class="flow-text">This div is 12-columns wide on all screen sizes</span>
+                </div>
+                <div class="col xs6 grid-example"><span class="flow-text">6-columns (one-half)</span>
+                </div>
+                <div class="col xs6 grid-example"><span class="flow-text">6-columns (one-half)</span>
+                </div>
+              </div>
+              <pre class="language-markup"><code class=" language-markup">
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>row<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs12<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This div is 12-columns wide<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs6<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This div is 6-columns wide<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs6<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This div is 6-columns wide<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+          </code></pre>
+
+              <br>
+            </div><!-- #grid-intro -->
+
+            <!-- Grid Offsets -->
+                        <div id="grid-offsets" class="section scrollspy">
+                            <h2 class="header">Offsets</h2>
+                            <p>To offset, simply add <code class="language-markup">offset-s2</code> to the class where <code class="language-markup">s</code> signifies the screen class-prefix (s = small, m = medium, l = large) and the number after is the number of columns you want to offset by.</p>
+                            <div class="row">
+                                <div class="col xs12 grid-example"><span class="flow-text">This div is 12-columns wide on all screen sizes</span></div>
+                                <div class="col s6 offset-s6 grid-example"><span class="flow-text">6-columns (offset-by-6)</span></div>
+                            </div>
+                             <pre class="language-markup"><code class="language-markup">
+    &lt;div class="row">
+      &lt;div class="col xs12">&lt;span class="flow-text">This div is 12-columns wide on all screen sizes&lt;/span>&lt;/div>
+      &lt;div class="col s6 offset-s6">&lt;span class="flow-text">6-columns (offset-by-6)&lt;/span>&lt;/div>
+    &lt;/div>
+          </code></pre>
+                        </div>
+                        <br>
+                        <!-- Grid push and pull -->
+                        <div id="grid-push" class="section scrollspy">
+                            <h2 class="header">Push and Pull</h2>
+                            <p>You can easily change the order of your columns with push and pull. Simply add <code class="language-markup">push-s2</code> or <code class="language-markup">pull-s2</code> to the class where <code class="language-markup">s</code> signifies the screen class-prefix (s = small, m = medium, l = large) and the number after is the number of columns you want to push or pull by.</p>
+                            <div class="row">
+                                <div class="col s7 push-s5 grid-example"><span style="font-size: 14px;">This div is 7-columns wide on pushed to the right by 5-columns.</span></div>
+                                <div class="col s5 pull-s7 grid-example"><span style="font-size: 14px;">5-columns wide pulled to the left by 7-columns.</span></div>
+                            </div>
+                             <pre class="language-markup"><code class="language-markup">
+    &lt;div class="row">
+      &lt;div class="col s7 push-s5">&lt;span class="flow-text">This div is 7-columns wide on pushed to the right by 5-columns.&lt;/span>&lt;/div>
+      &lt;div class="col s5 pull-s7">&lt;span class="flow-text">5-columns wide pulled to the left by 7-columns.&lt;/span>&lt;/div>
+    &lt;/div>
+          </code></pre>
+                        </div>
+                        <br>
+
+            <div id="grid-gutter-width" class="section scrollspy">
+              <h2 class="header">Gutter Width</h2>
+              <p>You can easily change the width of your gutters, and also specify different widths for different size viewports. Simply add <code class=" language-markup">.gutter-s</code> to a <code class=" language-markup">.row</code> where the <code class=" language-markup">s</code> signifies the desired gutter width (0 = none, s = small, m = medium, l = large, xl = extra large).</p>
+              <pre class="small">.gutter-0</pre>
+              <div class="row gutter-0">
+                <div class="col xs4"><div class="grey">&nbsp;</div></div>
+                <div class="col xs4"><div class="grey">&nbsp;</div></div>
+                <div class="col xs4"><div class="grey">&nbsp;</div></div>
+              </div>
+
+              <pre class="small">.gutter-s</pre>
+              <div class="row gutter-s">
+                <div class="col xs4"><div class="grey">&nbsp;</div></div>
+                <div class="col xs4"><div class="grey">&nbsp;</div></div>
+                <div class="col xs4"><div class="grey">&nbsp;</div></div>
+
+              </div>
+
+              <pre class="small">.gutter-m</pre>
+              <div class="row gutter-m">
+                <div class="col xs4"><div class="grey">&nbsp;</div></div>
+                <div class="col xs4"><div class="grey">&nbsp;</div></div>
+                <div class="col xs4"><div class="grey">&nbsp;</div></div>
+
+              </div>
+
+              <pre class="small">.gutter-l</pre>
+              <div class="row gutter-l">
+                <div class="col xs4"><div class="grey">&nbsp;</div></div>
+                <div class="col xs4"><div class="grey">&nbsp;</div></div>
+                <div class="col xs4"><div class="grey">&nbsp;</div></div>
+
+              </div>
+
+              <pre class="small">.gutter-xl</pre>
+              <div class="row gutter-xl">
+                <div class="col xs4"><div class="grey">&nbsp;</div></div>
+                <div class="col xs4"><div class="grey">&nbsp;</div></div>
+                <div class="col xs4"><div class="grey">&nbsp;</div></div>
+
+              </div>
+
+            </div>
+
+            <div id="responsive-gutter-width" class="section scrollspy">
+              <h2 class="header">Responsive Gutter Width</h2>
+              <p>You can also specify different gutter widths for different size viewports. Simply specify the default gutter width (this will display at the smallest screen sizes) with <code class=" language-markup">.gutter-0</code> and then override it for larger screen sizes with <code class=" language-markup">.mgutter-m</code>. The first <code class=" language-markup">m</code> signifies the screen class-prefix (m = medium, l = large, xl = large) and the second <code class=" language-markup">m</code> is the width of the gutter between columns.</p>
+
+              <pre class="small">.gutter-0 .mgutter-m .lgutter-l .xlgutter-xl</pre>
+              <div class="row gutter-0 mgutter-m lgutter-l xlgutter-xl">
+                <div class="col xs4"><div class="grey">&nbsp;</div></div>
+                <div class="col xs4"><div class="grey">&nbsp;</div></div>
+                <div class="col xs4"><div class="grey">&nbsp;</div></div>
+
+              </div>
+
+            </div>
+
+
+
+            <br>
+
+
+<!-- Creating Responsive Layouts -->
+              <div id="grid-responsive" class="scrollspy">
+                <h2 class="header">Creating Responsive Layouts</h2>
+                <p>Above we showed you how to layout elements using our grid system. Now we'll show you how to design your layouts so that they look great on all screen sizes.</p>
+                <h4>Screen Sizes</h4>
+                <table class="hoverable">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th data-field="id">Mobile Devices
+                        <br>&lt;= 600px</th>
+                      <th data-field="name">Tablet Devices
+                        <br>&lt;= 992px</th>
+                      <th data-field="price">Desktop Devices
+                        <br>993-1600px
+                      </th>
+                      <th data-field="price">Extra Large Devices
+                        <br>&gt; 1600px</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Class Prefix</strong></td>
+                      <td><code class=" language-markup">.s</code></td>
+                      <td><code class=" language-markup">.m</code></td>
+                      <td><code class=" language-markup">.l</code></td>
+                      <td><code class=" language-markup">.xl</code></td>
+
+                    </tr>
+                    <tr>
+                      <td><strong>Container Width</strong></td>
+                      <td>85%</td>
+                      <td>85%</td>
+                      <td>70%</td>
+                      <td>75%</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Number of Columns</strong></td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                      <td>12</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <br>
+
+                <h4>Adding Responsiveness</h4>
+                <p>In the previous examples, we only defined the size for small screens using <code class=" language-markup">"col xs12"</code>. This is fine if we want a fixed layout since the rules propagate upwards. By just saying s12, we are essentially saying <code class=" language-markup">"col xs12 m12 l12"</code>. But by explicitly defining the size we can make our website more responsive.</p>
+
+                <div class="row">
+                  <div class="grid-example col xs12 teal lighten-2"><span class="flow-text">I am always full-width (col xs12)</span>
+                  </div>
+                  <div class="grid-example col xs12 m6 teal lighten-2"><span class="flow-text">I am full-width on mobile (col xs12 m6)</span>
+                  </div>
+                </div>
+                <pre class=" language-markup"><code class=" language-markup">
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>row<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>grid-example col xs12<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>flow-text<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>I am always full-width (col xs12)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>grid-example col xs12 m6<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>flow-text<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>I am full-width on mobile (col xs12 m6)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+          </code></pre>
+
+                <h4>More Responsive Grid Examples</h4>
+                <div class="row">
+                  <div class="col grid-example s12 blue lighten-1"><span class="flow-text">s12</span>
+                  </div>
+                  <div class="col grid-example s12 m4 l2 teal lighten-1"><span class="flow-text">s12 m4 l2 xl2</span>
+                  </div>
+                  <div class="col grid-example s12 m4 l8 xl2 teal li lighten-1"><span class="flow-text">s12 m4 l8 xl2</span>
+                  </div>
+                  <div class="col grid-example s12 m4 l2 xl2 teal li lighten-1"><span class="flow-text">s12 m4 l2 xl2</span>
+                  </div>
+                  <div class="col grid-example s12 m6 l3 xl2 purple li lighten-3"><span class="flow-text">s12 m6 l3 xl2</span>
+                  </div>
+                  <div class="col grid-example s12 m6 l3 xl2 purple li lighten-3"><span class="flow-text">s12 m6 l3 xl2</span>
+                  </div>
+                  <div class="col grid-example s12 m6 l3 xl2 purple li lighten-3"><span class="flow-text">s12 m6 l3 xl2</span>
+                  </div>
+                  <div class="col grid-example s12 m6 l3 xl2 purple li lighten-3"><span class="flow-text">s12 m6 l3 xl2</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <pre class=" language-markup"><code class=" col xs12 language-markup">
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>row<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs12<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>s12<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs12 m4 l2 xl2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>s12 m4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs12 m4 l8 xl2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>s12 m4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs12 m4 l2 xl2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>s12 m4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>row<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs12 m6 l3 xl2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>s12 m6 l3 xl2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs12 m6 l3 xl2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>s12 m6 l3 xl2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs12 m6 l3 xl2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>s12 m6 l3 xl2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col xs12 m6 l3 xl2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>s12 m6 l3 xl2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+            </code></pre>
+                </div>
+              </div>
+
+          </div>
+        </div>
+
+          <div class="col hide-on-small-and-down m3 l2">
+            <div class="toc-wrapper pinned" style="top: 0px;">
+              <div style="height: 1px;">
+                <ul class="section table-of-contents">
+                  <li><a href="#grid-container" class="active">Container</a></li>
+                  <li><a href="#grid-intro">Introduction</a></li>
+                  <li><a href="#grid-offsets">Offsets</a></li>
+                  <li><a href="#grid-push">Push and Pull</a></li>
+                  <li><a href="#grid-gutter-width">Gutter width</a></li>
+                  <li><a href="#grid-layouts">Creating Layouts</a></li>
+                  <li><a href="#grid-responsive">Responsive Layouts</a></li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- col -->
+
+        </div>
+      </div>
+
+  </main>
+      <% include ../partials/footerScripts.html %>
+      <% include ../partials/footerScripts-styleguide.html %>
+  </body>
+
+</html>

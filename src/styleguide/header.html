@@ -1,0 +1,76 @@
+<html lang="en">
+  <head>
+    <!-- include common head -->
+    <% include ../partials/head.html %>
+    <!-- include styleguide head -->
+    <% include ./partials/head.html %>
+    <!-- page-specific head -->
+    <meta name="description" content="Meta description">
+  </head>
+  <body class="styleguide">
+    <header>
+    <% include ./partials/left-rail.html %>
+    </header>
+    <main>
+      <div class="container padding-top-xl">
+  <div class="row">
+
+    <div class="col xs12 m9 l10">
+
+    <!--  Footer Section-->
+      <div id="header" class="section scrollspy">
+        <h1>Headers</h1>
+        <p class="caption">Headers variations combine header components in different ways. Click through the tabs to preview all of the header variations.</p>
+
+        <div class="row">
+          <div class="col xs12">
+            <ul class="tabs overflow-hidden">
+              <li class="tab col xs3"><a class="active" href="#test1">Full header</a></li>
+              <li class="tab col xs3"><a href="#test2">No TIF button</a></li>
+              <li class="tab col xs3"><a href="#test3">Contact number</a></li>
+            </ul>
+          </div>
+          <div id="test1" class="col xs12">
+            <h2>Header A: Full header without try it free button</h2>
+            <div style="position:fixed; left:0; top:0;">
+              [%- partial('/partials/header/header-a-standard') %]
+            </div>
+          </div>
+          <div id="test2" class="col xs12">
+            <h2>Header B: Full header with try it free button</h2>
+            <div style="position:fixed; left:0; top:0;">
+              [%- partial('/partials/header/header-b-tif-btn') %]
+            </div>
+          </div>
+          <div id="test3" class="col xs12">
+            <h2>Header C: Header with contact number</h2>
+            <div style="position:fixed; left:0; top:0;">
+              [%- partial('/partials/header/header-c-contact-only') %]
+            </div>
+          </div>
+        </div>
+
+
+      </div> <!-- End of header section -->
+
+    </div>
+
+    <div class="col hide-on-small-and-down m3 l2">
+      <div class="toc-wrapper pin-top" style="top: 0px;">
+        <div style="height: 1px;">
+          <ul class="section table-of-contents">
+            <li><a href="#header" class="active">Header</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+    </main>
+    <% include ../partials/footerScripts.html %>
+    <% include ../partials/footerScripts-styleguide.html %>
+  </body>
+</html>
