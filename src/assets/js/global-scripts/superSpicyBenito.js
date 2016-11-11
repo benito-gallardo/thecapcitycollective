@@ -65,7 +65,32 @@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@       BOOM      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
+// jQueryLoadListener lets you trigger jQuery-dependent script as soon as jQuery loads.
+// To trigger, 'mycode', use:
+// jQueryLoadListener.Deferred.execute(mycode);
+var jQueryLoadListener = jQueryLoadListener || { };
+jQueryLoadListener.Deferred = function () {
+  var functions = [];
+  var timer = function() {
+    if (window.jQuery) {
+        while (functions.length) {
+            functions.shift()(window.jQuery);
+        }
+    } else {
+        window.setTimeout(timer, 250);
+    }
+  };
+  timer();
+  return {
+    execute: function(onJQueryReady) {
+        if (window.jQuery) {
+            onJQueryReady(window.jQuery);
+        } else {
+            functions.push(onJQueryReady);
+        }
+    }
+  };
+}();
 ////////////////////////////////////////////////////////////////////////////////////////////////
 //Debounce: Limits the rate at which a function can fire ///////////////////////////////////////
 //
