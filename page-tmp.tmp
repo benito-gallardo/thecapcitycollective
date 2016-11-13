@@ -2,7 +2,8 @@
 <html>
 <head>
   <!-- global head -->
-  
+  <!-- global head -->
+     <% include ./partials/head.html %>
 
   <!-- page-specific head -->
   <title>Page Title</title>
