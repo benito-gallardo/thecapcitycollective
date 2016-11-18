@@ -179,8 +179,37 @@ function makeSameHieght(element, responsive) {
 };
 
 
-//Setting data attr on body for devices type on resize
+
 (function($){
+
+var responsiveText = {
+    init: function(){
+      this.cacheDom();
+      this.render();
+      console.log('running');
+    },
+    cacheDom: function(){
+      this.responsiveFont = $('.responsive-text');
+    },
+    render: function(){
+      this.responsiveFont.each(function(){
+        var fontSize = parseInt($(this).parent().width()/6)+"px";
+        $(this).css('font-size', fontSize); 
+        console.log(fontSize);
+      });  
+    },//changeFontSize
+    deb: function(){
+      (debounce(function() {
+          responsiveText.render();
+          console.log('doit');
+       }, 200))();
+    }//deb
+  }
+  if($('.responsive-text').length){
+    responsiveText.init();
+    window.addEventListener('resize', responsiveText.deb);
+  }
+//Setting data attr on body for devices type on resize
   var status='derp';
 
   //cache DOM

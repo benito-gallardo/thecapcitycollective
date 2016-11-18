@@ -2,6 +2,9 @@
     "_comment": "All pages listed here will be added to the the sitemap function.",
     "_comment-2": "ANY pages including '!' before the file name will NOT be included.",
     "extraPagesArr": [
-        "build/**/*.html"
+        "build/**/*.html",
+        "!build/partials/**",
+        "!build/**/partials/*.html",
+        "!build/styleguide/**"
     ]
 }

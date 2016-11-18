@@ -128,7 +128,7 @@ gulp.task('sass', function () {
   return gulp.src('src/assets/sass/**/*.scss')
     .pipe(sass({includePaths: ['./node_modules'], outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('build/assets/stylesheets/'))
-    .pipe(browserSync.stream({match: '**/*.css'}));
+    .pipe(browserSync.stream({match: '**/*.scss'}));
 
 });
 
@@ -162,7 +162,14 @@ gulp.task('bundleScripts', function() {
     .pipe(gulp.dest('build/assets/javascript'));
 });
 
-gulp.task('scripts', ['globalScripts', 'bundleScripts']);
+//Make single script files that will be used on a case by case basis
+gulp.task('localScripts',function() {
+  return gulp.src('src/assets/js/local-scripts/**/*.js')
+  .pipe(uglify())
+  .pipe(gulp.dest('build/assets/javascript/local-scripts'));
+});
+
+gulp.task('scripts', ['globalScripts', 'bundleScripts','localScripts']);
 
 //////////////////////////////////////////////////////////////////
 // Master Tasks
