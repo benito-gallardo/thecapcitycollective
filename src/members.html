@@ -139,7 +139,10 @@
           },//newWall
           resizeWin: function(){
             
-            setTimeout(function(){$(window).trigger('resize'); doIt.changeFontSize(); }, 200);
+            setTimeout(function(){$(window).trigger('resize');  }, 200);
+            $(window).load(function(){
+              doIt.changeFontSize();
+            });
             
           },//resizeWin
           changeFontSize: function(){
