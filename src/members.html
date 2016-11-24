@@ -138,8 +138,8 @@
             doIt.resizeWin();
           },//newWall
           resizeWin: function(){
-            
-            setTimeout(function(){ doIt.changeFontSize();$(window).trigger('resize'); }, 300);
+            $(window).trigger('resize');
+            setTimeout(function(){ doIt.changeFontSize(); }, 300);
             
           },//resizeWin
           changeFontSize: function(){

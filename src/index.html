@@ -169,7 +169,7 @@
     </style>
             <% include ./partials/footerScripts.html %>
 
-    <script src="http://www.youtube.com/iframe_api"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script>
     $(document).ready(function(){
       $('body').addClass('loaded');
@@ -209,14 +209,14 @@
       }
     }
 
-    //this pauses the video when it's out of view, just wrap your video in .m-//video
+    //this pauses the video when it's out of view
     $(window).scroll(function() {
-        var hT = $('.m-video').height(),
+        var hT = $('#player').height(),
             wS = $(this).scrollTop();
         if (wS > hT) {
             player.pauseVideo();
         } else {
-            player.playVideo();
+            player.playVideo('played');
         }
     });
     </script>
