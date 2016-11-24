@@ -140,6 +140,10 @@
           resizeWin: function(){
             $(window).trigger('resize');
             setTimeout(function(){ doIt.changeFontSize(); }, 300);
+            $(window).load(function(){
+              $(window).trigger('resize');
+              setTimeout(function(){ doIt.changeFontSize(); }, 300);
+            })
             
           },//resizeWin
           changeFontSize: function(){
