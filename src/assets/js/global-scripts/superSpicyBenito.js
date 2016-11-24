@@ -186,7 +186,6 @@ var responsiveText = {
     init: function(){
       this.cacheDom();
       this.render();
-      console.log('running');
     },
     cacheDom: function(){
       this.responsiveFont = $('.responsive-text');
@@ -195,13 +194,11 @@ var responsiveText = {
       this.responsiveFont.each(function(){
         var fontSize = parseInt($(this).parent().width()/6)+"px";
         $(this).css('font-size', fontSize); 
-        console.log(fontSize);
       });  
     },//changeFontSize
     deb: function(){
       (debounce(function() {
           responsiveText.render();
-          console.log('doit');
        }, 200))();
     }//deb
   }

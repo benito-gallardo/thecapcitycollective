@@ -105,7 +105,6 @@
           },
           buildImg: function(){
             this.memes.sort(function() { return 0.5 - Math.random() });
-            //console.log(this.memes.length);
             for (var i = 0; i < 10; ++i) {
               this.w = 1 + 3 * Math.random() << 0;
               this.html += this.temp
@@ -130,33 +129,30 @@
                 onResize: function() {
                     wall.fitWidth();
                 }
-            });//wall
-            // var images = wall.container.find('.brick');
-            // images.find('img').load(function() {
-            //   wall.fitWidth();
-            // });
+            });
             doIt.resizeWin();
           },//newWall
           resizeWin: function(){
             $(window).trigger('resize');
             setTimeout(function(){ doIt.changeFontSize(); }, 300);
-            $(window).load(function(){
+            window.onload = function(){
               $(window).trigger('resize');
               setTimeout(function(){ doIt.changeFontSize(); }, 300);
-            })
+              console.log('loaded');
+            }
             
           },//resizeWin
           changeFontSize: function(){
             $('.member-text').each(function(){
               var fontSize = parseInt($(this).width()/6)+"px";
               $(this).find('h2').css('font-size', fontSize); 
-              console.log(fontSize);
+            
             });  
           },//changeFontSize
           deb: function(){
             (debounce(function() {
                 doIt.changeFontSize();
-                console.log('doit');
+                
              }, 200))();
           }//deb
         }//doIt
