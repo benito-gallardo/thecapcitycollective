@@ -4,7 +4,7 @@
 <head>
     <!-- global head -->
     <!-- global head -->
-    <% include ./partials/head.html %>
+    <% include ../partials/head.html %>
         <!-- page-specific head -->
         <title>Page Title</title>
         <meta name="description" content="This is the page description.">
@@ -26,7 +26,7 @@
         <section class="hero text-center cover hgroup-s300 hgroup-m500">
             <div class="container text-white valign-middle">
                 <h1 class="h-xl text-bold responsive-text text-shadow">Members</h1>
-                <% include ./partials/head.html %>
+                <% include ../partials/head.html %>
                     <h2 class="h-subhead"> Page subhead in sentence form</h2>
             </div>
             <!-- .container -->
@@ -40,7 +40,7 @@
         </section>
         <!-- .section-1 -->
         <!-- .section-class -->
-        <% include ./partials/foot.html %>
+        <% include ../partials/foot.html %>
         <style>
         .hero.cover{
           background-image: url(/assets/images/crew.jpg);
@@ -82,7 +82,7 @@
 
         
         </style>
-            <% include ./partials/footerScripts.html %>
+            <% include ../partials/footerScripts.html %>
     </div>
     <!-- #main -->
     <!-- global footer -->
@@ -96,7 +96,7 @@
             this.buildImg();
           },
           cacheDom: function(){
-            this.memes = <% include ./assets/js/local-scripts/members.js %>;//['bone', 'chili', 'dre', 'mamba3', 'nirmesh2', 'paul', 'stress', 'thanh', 'tig', 'trouble'];
+            this.memes = <% include ../assets/js/local-scripts/members.js %>;//['bone', 'chili', 'dre', 'mamba3', 'nirmesh2', 'paul', 'stress', 'thanh', 'tig', 'trouble'];
             this.temp = "<div class='brick' style='width:{width}px;background-image:url(/assets/images/members/{img}.jpg)'><a href='{linkTo}' class='text-white db'><span class='member-background pos-a'></span><div class='member-text pos-a text-center valign-middle full-width padding-left-s padding-right-s'><h2 class='margin-0 text-bold'>{fullName}</h2></div><img src='/assets/images/members/{img}.jpg' class='img-hidden' width='100%'></a></div>";
             this.w = 1;
             this.h = 1;
@@ -138,7 +138,6 @@
             window.onload = function(){
               $(window).trigger('resize');
               setTimeout(function(){ doIt.changeFontSize(); }, 300);
-              console.log('loaded');
             }
             
           },//resizeWin
