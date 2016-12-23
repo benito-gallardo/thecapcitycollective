@@ -24,7 +24,17 @@
     <div id="main" class="padding-bottom-0">
         <section class="hero text-center pos-r cover">
           <div class="full-width pos-a text-white">
-
+        <span class="navBarIcon" id="navBarIcon" onclick="openNav()">&#9776;</span>
+        <div class="navBarContainer">
+            <div class="navBar" id="navBar">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <a href="default.asp">Home</a>
+              <a href="news.asp">News</a>
+              <a href="contact.asp">Contact</a>
+              <a href="about.asp">About</a>
+            </div>
+        </div>
+      
             <h1 class="h-xl text-bold " ><span class="fadeInDown">THE</span> <br /><span class="fadeInDown">CAPCITY COLLECTIVE</span></h1>
             <h2 class="h-subhead fadeInUp">The Artists of Austin's Underground</h2>
             <div class="fadeInUp loader"></div>
@@ -220,6 +230,23 @@
         }
     });
     </script>
+
+    <script>
+      function openNav() {
+          document.getElementById("navBar").style.width = "250px";
+          document.getElementById("main").style.marginRight = "250px";
+          document.getElementById("navBarIcon").style.visibility = "hidden";
+
+      }
+
+      function closeNav() {
+          document.getElementById("navBar").style.width = "0";
+          document.getElementById("navBarIcon").style.visibility = "visible";
+
+          document.getElementById("main").style.marginRight= "0";
+      }
+    </script>
+
 </body>
 
 </html>
