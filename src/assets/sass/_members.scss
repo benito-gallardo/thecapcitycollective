@@ -1,0 +1,89 @@
+.members {
+  #main {
+    overflow-x: hidden;
+  }
+  .full-container{
+    @media #{$medium-and-up}{
+      width:100%;
+    }
+  }
+  .kommissar {
+    font-size: 200px;
+    color: black;
+  }
+   .bg {
+    
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center right;
+    
+  }
+  &.paul {
+    .bg,.hero {
+      background-image:url(/assets/images/members/paul.jpg);
+    }
+  }
+  &.stress{
+    .bg,.hero{
+      background-image:url(/assets/images/members/stress.jpg);
+      background-size:cover;
+      background-repeat:no-repeat;
+      
+    }
+  }
+  &.chili{
+    .bg,.hero {
+      background-image:url(/assets/images/members/chili.jpg);
+    }
+  }
+  &.bone {
+    .bg,.hero {
+      background-image:url(/assets/images/members/bone.jpg);
+    }
+  }
+  &.mamba {
+    .bg {
+      background-image:url(/assets/images/members/mamba3.jpg);
+    }
+  }
+  &.broku {
+    .bg {
+      background-image:url(/assets/images/members/broku.jpg);
+    }
+  }
+  &.dragon {
+    .bg {
+      background-image:url(/assets/images/members/nirmesh2.jpg);
+    }
+  }
+  &.paul {
+    .bg {
+      background-image:url(/assets/images/members/paul.jpg);
+    }
+  }
+  &.thanh {
+    .bg {
+      background-image:url(/assets/images/members/thanh.jpg);
+    }
+  }
+  &.tiggo {
+    .bg {
+      background-image:url(/assets/images/members/tig.jpg);
+    }
+  }
+  &.trouble {
+    .bg {
+      background-image:url(/assets/images/members/trouble.jpg);
+    }
+  }
+  &.dre {
+    .bg {
+      background-image:url(/assets/images/members/dre.jpg);
+    }
+  }
+  .fixed-50 {
+    width:50%;
+    position: fixed;
+    height:100%;
+  }
+}

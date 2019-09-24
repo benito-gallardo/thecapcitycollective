@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- global head -->
+  <!-- global head -->
+     <% include ../../partials/head.html %>
+
+  <!-- page-specific head -->
+  <title>Page Title</title>
+  <meta name="description" content="This is the page description.">
+  <link rel="canonical" href="http://www.thecapcitycollective.com/members/stress" />  
+  
+  <!-- og tags -->
+  <meta property="og:title" content="Page Title" />
+  <meta property="og:description" content="This is the page description." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://www.thecapcitycollective.com/members/stress" />
+  <meta property="og:image" content="http://www.thecapcitycollective.com/assets/images/logo.jpg" />
+
+  <!-- robots -->
+  <meta name="robots" content="noindex, nofollowindex, follow">
+</head>
+<body class="members broku">
+    <!-- global header -->
+    
+    
+    <!-- page content -->
+    <div id="main" class="padding-bottom-0">
+      <section  class="">
+        <div class="container full-width mmargin-left-0">
+          <div class="row margin-bottom-0">
+            <div class="col xs12 m6 same-height">
+              <div class="left fixed-50 bg text-white">
+                <div class="page-nav valign-middle text-center ">
+                  <h1 class="h-xl text-bold text-white text-shadow">Stress the Almighty</h1>
+                </div>
+                <!--<img src="/assets/images/members/hex/stress.png" class=""/>-->
+              </div>
+            </div><!-- col -->
+            <div class="col xs12 m6 right same-height mpadding-left-l mpadding-right-l">
+               <h3 class="kommissar text-bold text-black">About</h3>
+              <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et lectus lorem. Vivamus ac fringilla ante, non venenatis erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam faucibus non nulla non commodo. Pellentesque ullamcorper lacus ac ligula tristique, hendrerit rhoncus nunc pretium. Nunc fringilla molestie ante vel gravida. Suspendisse venenatis vel augue vitae finibus. Sed tincidunt tincidunt rhoncus.</p>
+              <p>
+                Morbi urna erat, maximus sed pulvinar ac, varius non purus. Morbi id viverra nibh. Aenean luctus aliquam tincidunt. Suspendisse interdum dolor vel placerat ultrices. Integer tincidunt viverra massa in interdum. Etiam varius mi eget finibus suscipit. Phasellus vel eros vitae quam semper bibendum id et nisi. Sed faucibus tellus et felis ornare, ut dignissim augue iaculis. Proin vel tristique enim, nec accumsan ipsum. Integer suscipit condimentum luctus. Duis sit amet blandit lectus, nec posuere sem. Fusce varius mi in lacinia tristique. Aenean interdum viverra quam sed commodo. Nullam convallis, erat nec imperdiet viverra, nulla nibh porta mauris, sagittis auctor libero justo non sapien. Mauris eget velit aliquet, molestie quam egestas, consequat velit.
+              </p>
+
+              <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis sollicitudin vitae dolor eu luctus. Proin eget vehicula sapien. Vestibulum lacinia nunc at posuere malesuada. Donec hendrerit eros sit amet consequat blandit. Sed mauris ex, bibendum id ex ut, mattis consequat metus. Donec sit amet consequat libero. Nullam est augue, dapibus ac nunc nec, rhoncus efficitur lectus. Duis vitae accumsan velit. Nulla vestibulum venenatis arcu, sed varius tellus dapibus vel. Mauris sit amet faucibus sapien, at aliquet ex. Morbi quam nunc, ultricies non lacus et, posuere mattis odio. Sed eleifend commodo dolor ut rhoncus. In hac habitasse platea dictumst.</p>
+
+              <p>Cras facilisis condimentum bibendum. Aliquam et ligula condimentum, congue felis et, commodo urna. Vivamus egestas nisl dictum, pellentesque enim nec, rutrum sem. Duis nunc magna, aliquet id mauris vel, convallis elementum arcu. Vestibulum suscipit diam eu leo sodales, in pharetra nibh porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam rutrum urna vitae libero condimentum, at laoreet libero imperdiet. Vestibulum pretium dui justo, ac blandit tellus mollis nec. Quisque quis ullamcorper ligula. Nunc ut mi placerat, vulputate augue in, ullamcorper leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras maximus ligula id lacinia maximus. Nullam velit erat, hendrerit sit amet enim vel, feugiat auctor eros. Integer bibendum ex eget augue rutrum, vitae convallis ante porttitor.</p>
+
+              <p>Morbi ac dapibus quam. Phasellus fringilla dolor et nulla interdum aliquet. Sed pulvinar sollicitudin purus at hendrerit. Proin sit amet eros quam. Sed tincidunt massa ut neque gravida hendrerit. Nullam id sem et elit maximus luctus at in augue. Aenean id nibh facilisis, maximus est nec, pulvinar dui. Integer vitae odio feugiat, lacinia sem et, tempus ligula. Duis sagittis auctor magna, non ullamcorper leo rutrum id. Pellentesque molestie ligula at nunc egestas, vulputate vehicula ex pharetra. Nulla viverra tortor sem, at elementum justo pretium ut. Curabitur hendrerit imperdiet aliquet. Donec sit amet ex nec purus rhoncus accumsan non in mauris. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi eget elit ut velit facilisis suscipit. Duis ac lacinia augue.</p>
+            </div><!-- col -->
+         </div><!-- row -->
+        </div><!-- .container -->
+      </section><!-- .hero  -->
+ <% include  ../../partials/foot.html %>
+ 
+
+    </div><!-- #main -->
+
+    <!-- global footer -->
+
+<% include ../../partials/footerScripts.html %>
+<script>
+  var member = {
+    init: function(){
+      this.cacheDom();
+      this.sameHeight();
+    },
+    cacheDom: function(){
+       this.fixed = $('.fixed-50');
+       this.sameH = $('.same-height');
+    },
+    sameHeight: function(){
+      makeSameHieght(this.sameH, true)
+    }
+  }
+  member.init();
+</script>
+</body>
+</html>

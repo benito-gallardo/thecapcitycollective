@@ -114,7 +114,10 @@ gulp.task('minify-html', function() {
     .pipe(htmlmin({collapseWhitespace: true, minifyJS : true, minifyCSS: true , removeComments: true}))
     .pipe(gulp.dest('build'));
 });
-
+gulp.task('fonts', function(){
+  return gulp.src('src/assets/fonts/*')
+  .pipe(gulp.dest('build/assets/fonts/'))
+});
 
 // Lint Task
 gulp.task('lint', function() {
@@ -176,7 +179,7 @@ gulp.task('scripts', ['globalScripts', 'bundleScripts','localScripts']);
 // Default Task <-- Make into Dev build vs. Prod build
 gulp.task('default', function(callback) {
   runSequence('clean',
-              ['lint', 'sass', 'scripts', 'imagemin', 'videoCopy', 'generate'],
+              ['lint', 'sass', 'scripts', 'imagemin', 'videoCopy', 'generate','fonts'],
               'minify-html',
               'sitemap',
               callback);
@@ -206,7 +209,7 @@ gulp.task('watch', function() {
 
 gulp.task('serve', function(callback) {
   runSequence('clean',
-              ['lint', 'sass', 'scripts', 'imagemin', 'videoCopy', 'generate', 'watch'],
+              ['lint', 'sass', 'scripts', 'imagemin', 'videoCopy', 'generate', 'watch','fonts'],
               'browser-sync',
               'minify-html',
               'sitemap',

@@ -131,6 +131,10 @@ function debounce(func, wait, immediate) {
 // function logToConsole(args){
 //   console.log(args)
 // }
+//  or
+// pub: function(){
+//  pubsub.on('deviceChanged', member.checkDevice);
+// },
 ////////////////////////////////////////////////////////////////////////////////////////////////
 var pubsub = {
   pubsub: {},
